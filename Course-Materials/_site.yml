@@ -1,0 +1,32 @@
+name: "wfa4313"
+navbar:
+  title: "Course home"
+  left:
+    - text: "Course information"
+      menu:
+        - text: "Course Home"
+          href: "index.html"      
+        - text: "Course Syllabus"
+          href: "syllabus.html"
+    - text: "Course Content"
+      menu: 
+        - text: "Classes"
+          href: "classes.html"  
+        - text: "Laboratories"
+          href: "Laboratories.html"  
+        - text: "Assignments"
+          href: "Assignments.html"           
+        - text: "Final Project"
+          href: "Final-Project.html" 
+output_dir: "_site"
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    includes:
+      in_header: NULL
+      before_body: NULL
+      after_body: include_footer.html    
+    
+
+    

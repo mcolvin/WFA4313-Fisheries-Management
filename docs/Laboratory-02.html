@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="site_libs/highlight/textmate.css"
+      type="text/css" />
+<script src="site_libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.0/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Course home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Course information
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index.html">Course Home</a>
+    </li>
+    <li>
+      <a href="syllabus.html">Course Syllabus</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Course Content
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="classes.html">Classes</a>
+    </li>
+    <li>
+      <a href="Laboratories.html">Laboratories</a>
+    </li>
+    <li>
+      <a href="Assignments.html">Assignments</a>
+    </li>
+    <li>
+      <a href="Final-Project.html">Final Project</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><img src="media/Slide6.PNG" width="95%" /> <!--
+
+library(knitr)
+rmarkdown::render_site("Laboratory-02.Rmd")# build website
+# COPY FILES TO DOCS FOR GITHUB.IO
+system(paste("xcopy", 
+    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"', 
+    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',
+    "/E /C /H /R /K /O /Y")) 
+  q(save="no")  
+
+100 
+
+
+--></p>
+<div id="wfa4133-fisheries-science-laboratory-2" class="section level1">
+<h1>WFA4133 Fisheries Science Laboratory 2</h1>
+<div id="laboratory-overview" class="section level2">
+<h2>Laboratory overview</h2>
+<p>This lab is 3 exercises designed to simulate what a typical fisheries professional is required to do with sampling data, from data entry to preliminary analysis.</p>
+<ol style="list-style-type: decimal">
+<li>The first exercise is a typical situation where data is collected by sampling a small impoundment for bluegill and largemouth bass.</li>
+<li>The second exercise works through a commonly encountered issue, where weight is only taken on a subset of fish due to time constraints.<br />
+</li>
+<li>The third exercise is another typical situation where data is collected to assess the condition of a sport fish population.</li>
+</ol>
+<p>For this lab you will be randomly divided into teams that you will remain in for the rest of class and expected to work collaboratively through the class exercises. You may or may not work together to answer the lab question for each exercise. <u>NOTE: Your answers to the questions should be written in your own words.</u> This lab is worth 20 points.</p>
+</div>
+<div id="before-you-get-started" class="section level2">
+<h2>Before you get started</h2>
+<ol style="list-style-type: decimal">
+<li>Open Chrome and navigate to your group’s web page</li>
+<li>Download and unzip the class materials (*.zip) to the desktop of your group’s laptop.<br />
+</li>
+<li>Click on the link the lab web app (can be found on the lab homepage in Chrome)</li>
+<li>Follow the steps for exercises 1 – 3 below using the web app. The link is located on the lab homepage.</li>
+<li>Your responses to the lab questions must by entered at <a href="http://goo.gl/forms/PFdmKVUUXO" class="uri">http://goo.gl/forms/PFdmKVUUXO</a>, by 5 pm the day of the next scheduled lab.</li>
+<li>This link can also be found on the lab webpage.<br />
+</li>
+<li>If you have any questions do not hesitate to ask</li>
+</ol>
+<p style="page-break-after:always;">
+</p>
+</div>
+<div id="exercise-1-how-do-we-quantify-size-structure" class="section level2">
+<h2>EXERCISE 1: How do we quantify size structure?</h2>
+<p>This exercise simulates what you can expect as a practicing fisheries professional. Your team has returned from sampling a small impoundment for largemouth bass and bluegill. Using the datasheets provided perform the following (NOTE: all files are located and should be saved to the folder entitled “Lab 2-&gt; Exercise 1” located on the desktop; this is the folder you unzipped).</p>
+<div id="instructions" class="section level3">
+<h3>Instructions</h3>
+<div id="data-entry-and-upload" class="section level4">
+<h4>Data entry and upload</h4>
+<ol style="list-style-type: decimal">
+<li>Enter the data from the datasheet into the spreadsheet entitled “Exercise 1.csv” in folder “Exercise 1”. <u>Be sure to enter Largemouth Bass as LMB and Bluegill as BLG, no lower case!</u> There are column names already already set up in the spreadsheet, use those.<br />
+</li>
+<li>Periodically save the csv file. (NOTE excel will warn you that there may be incompatible features, just click yes and carry on)</li>
+<li>Look over the data entered to ensure there were no mistakes due to data entry!</li>
+<li>Save the final data in the csv file in the folder “lab 2 -&gt; Exercise 1”</li>
+<li>Open Chrome, and upload the data to the Exercise 1 portion of the Lab app.<br />
+</li>
+<li>Once the data is loaded, it will appear to the right</li>
+<li>Look over the uploaded data and ensure it looks OK!</li>
+</ol>
+</div>
+<div id="generating-a-length-histogram" class="section level4">
+<h4>Generating a length histogram</h4>
+<p>Length histograms can reveal clues about a population’s growth and structure. However some of the structure can be obscured by how the histogram is constructed. Let’s explore this.</p>
+<ol style="list-style-type: decimal">
+<li>On the left hand side, select “largemouth bass” as the species from the filter fish species dropdown</li>
+<li>The application will generate a preliminary histogram of your length data, visible in the “Length histogram” tab<br />
+</li>
+<li>Set the binning interval using the input box to generate a histogram. Use any bin sizes, your choice, and record your final choice here __________.</li>
+<li>Save your final histogram to the folder “lab 2 -&gt; Exercise 1”. This is done by right clicking on the histogram image</li>
+<li>Repeat steps 1 – 4 for bluegill</li>
+</ol>
+</div>
+<div id="calculating-size-structure-indices-from-length-data" class="section level4">
+<h4>Calculating Size structure indices from length data</h4>
+<ol style="list-style-type: decimal">
+<li>On the left hand side, select “largemouth bass” as the species from the filter fish species dropdown.</li>
+<li>Enter the appropriate length values from Table 1.1 below to calculate PSD frequencies in the input box on the left hand side. NOTE: Tables are located at the end of this packet.<br />
+</li>
+<li>Write the number of fish in each length category in Table 1.1 below. NOTE: These counts are located in the PSD Counts tab</li>
+<li>Repeat steps 1 – 4 for bluegill</li>
+<li>As a group using whatever tools you have at your disposal, calculate traditional (PSD-X) and incremental (PSD-X-Y) values for Largemouth Bass and Bluegill given the numbers you recorded in Table 1.1 and 1.2 and record them in the corresponding table columns. PSD equations can be found below. NOTE: incremental counts can be calculated from traditional counts by subtracting number of fish in the next largest cell from current cell. For example, if there are 100 stock fish and 20 quality fish, the number of fish that are stock – quality sized is 100-20 = 80. The number of fish in the trophy size class is always the same for traditional or incremental.</li>
+<li>Using the counts in Tables 1. 2, calculate the incremental proportion stock density to complete Table 1.2 below. See the below for PSD equations.</li>
+</ol>
+</div>
+<div id="traditional-psd-equation" class="section level4">
+<h4>TRADITIONAL PSD EQUATION</h4>
+<p><span class="math inline">\(PSD-X=\frac{\text{Number of fish}\ge \text{ specified length}}{\text{Number of fish }\ge \text{ stock length}}\cdot 100\)</span></p>
+</div>
+<div id="incremental-psd-equation" class="section level4">
+<h4>INCREMENTAL PSD EQUATION</h4>
+<p><span class="math inline">\(PSD-X-Y=\frac{\text{Number of fish}\,\text{in bin}}{\text{Number of fish }\ge \text{ stock length}}\cdot 100\)</span></p>
+<p>EXERCISE 1: QUESTIONS (6 POINTS TOTAL)</p>
+<p>1.1) What was the binning interval you used to finalize your preliminary length-frequency figure for 2016 and why did you select that interval? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>1.2) Is there anything about your Largemouth Bass or Bluegill histograms that does not make sense? If so what is it? What could have caused it? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>1.3) The impoundment is owned by a local muncipality and they would like to know what type of fishery and fishing could be expected. Using PSD-X values calculated for the Largemouth Bass and Bluegill and make a recommendation for a fishery type and why you would suggest that classification. See Table 1.3 in the appendix for PSD values for various Largemouth Bass and Bluegill systems. (2 points)</p>
+<p><br><br><br><br><br></p>
+<p style="page-break-after:always;">
+</p>
+</div>
+</div>
+</div>
+<div id="exercise-2-how-do-we-estimate-weight-and-biomass" class="section level2">
+<h2>EXERCISE 2: How do we estimate weight and biomass?</h2>
+<p>In the sampling, length-weight data was commonly taken for the first 30 fish processed and then only length data was taken. An allometric equation for the length-weight relationship is then used to estimate the weight for the fish with missing weights. (NOTE: all files are located and should be saved to the folder entitled “Lab 2-&gt; Exercise 2” located on the desktop):</p>
+<div id="instructions-1" class="section level3">
+<h3>INSTRUCTIONS</h3>
+<div id="data-entry-and-upload-1" class="section level4">
+<h4>Data entry and upload</h4>
+<ol style="list-style-type: decimal">
+<li>Enter the data from the datasheet into the spreadsheet entitled “Exercise 2”. There are column names already in the spreadsheet, use those. <u>Be sure to enter Largemouth Bass as LMB and Bluegill as BLG, no lower case!</u> There are column names already already set up in the spreadsheet, use those.<br />
+</li>
+<li>Periodically save the csv file. (NOTE excel will warn you that there may be incompatible features, just click yes and carry on)</li>
+<li>Look over the data entered to ensure there were no mistakes!</li>
+<li>Save the final data in the csv file in the folder “lab 2 -&gt; Exercise 2”</li>
+<li>Open Chrome and then upload data to the Exercise 2 portion of the Lab app.<br />
+</li>
+<li>Once the data is loaded, it will appear to the right</li>
+<li>Look over the uploaded data and ensure it looks OK!</li>
+</ol>
+</div>
+<div id="evaluating-length-weight-relationships" class="section level4">
+<h4>Evaluating length-weight relationships</h4>
+<ol style="list-style-type: decimal">
+<li>Once the data has been uploaded click on the Length-Weight plot tab to view the length-weight relationship.<br />
+</li>
+<li>Using the input boxes for <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> on the left hand side of the app, enter values for <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> from Table 2.1 below and record the sums of square residuals in Table 2.1.</li>
+<li>After running the first 6 combinations of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> in Table 2.1, as a team come up with 2 more combinations to evaluate, not equal to the last values of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span>. Record the values of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> you evaluated as well as the resulting sums of squares residuals in Table 2.1.<br />
+</li>
+<li>Run the final combination of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> located in the last row of Table 2.1 and record the resulting sums of squares residuals in Table 2.1.</li>
+</ol>
+<p>What was the combination of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> in Table 2.1 that had the lowest sums of squares residuals?</p>
+<p><span class="math inline">\(a^\prime\)</span>:__________ <span class="math inline">\(b\)</span>:__________</p>
+<p>The “Length-weight equation estimates” tab provides the actual best fit estimates of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> (i.e., the estimate that minimizes the sum squared residuals). Record those values below</p>
+<p><span class="math inline">\(a^\prime\)</span>:__________ <span class="math inline">\(b\)</span>:__________</p>
+<p>Using the values of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> for the best fit above and your spreadsheet for exercise 2, estimate the weight values for fish without weights. This is done by typing the allometric scaling equation into your spreadsheet as (=10^(<span class="math inline">\(a^\prime\)</span>)*length^<span class="math inline">\(b\)</span>). Recall the length weight relationship is <span class="math inline">\(W=a\cdot L ^b\)</span>. Then calculate the mean weight of the sample and record below, making sure to save your spreadsheet once you are done. Use the =average(…) function in excel to calculate average weight.</p>
+<p>Mean sample weight: ____________</p>
+<p>Suppose there are 10,000 fish in the lake, estimate the biomass in the lake as [mean weight]x[10000]</p>
+<p>Total lake biomass:__________</p>
+</div>
+<div id="exercise-2-questions-10-points-total" class="section level4">
+<h4>EXERCISE 2 QUESTIONS (10 POINTS TOTAL)</h4>
+<p>2.1. Was there evidence for isometric (<span class="math inline">\(b = 3\)</span>) or allometric (<span class="math inline">\(b \neq 3\)</span>) scaling of weight with length in the largemouth bass population? Given the value of <span class="math inline">\(b\)</span> for the sample, how would you expect the weight of fish to change with length? Values less than 3 result in a fish getting more fusiform as it gets larger, greater than 3 it becomes more plump. (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>2.2. Do you believe the estimate of total biomass? Do you think it would be reasonable to calculate a 95% confidence interval for the biomass estimate based on the sample variance? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>2.3. Once weight has been estimated for the entire sample, would it be reasonable to calculate <span class="math inline">\(W_{r}\)</span> for all the Largemouth Bass in the sample? Why or why not? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>2.4. This analysis assumes that all fish are captured equally. Would there be an effect of size selective capture which resulted in few, if any, large fish captured? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>2.5. How does <span class="math inline">\(a^\prime\)</span> relate to a in the length-weight equation? HINT:how does <span class="math inline">\(a\)</span> equal <span class="math inline">\(a^\prime\)</span>. (2 points)</p>
+<p><br><br><br><br><br></p>
+<p style="page-break-after:always;">
+</p>
+</div>
+</div>
+</div>
+<div id="exercise-3-relative-weight" class="section level2">
+<h2>EXERCISE 3: Relative weight</h2>
+<p>A more typical sampling event would require biologists to collect length weight data on all the largemouth bass collected. Your team has returned from sampling a different small impoundment for largemouth bass. Using the datasheet provided perform the following (NOTE: all files are located and should be saved to the folder entitled “Lab 2-&gt; Exercise 3” located on the desktop):</p>
+<div id="instructions-2" class="section level3">
+<h3>INSTRUCTIONS</h3>
+<div id="data-entry-and-upload-2" class="section level4">
+<h4>Data entry and upload</h4>
+<ol style="list-style-type: decimal">
+<li>Enter the data from the datasheet into the spreadsheet entitled “Exercise 3”. There are column names already in the spreadsheet, use those. <u>Be sure to enter Largemouth Bass as LMB and Bluegill as BLG, no lower case!</u> There are column names already already set up in the spreadsheet, use those.<br />
+</li>
+<li>Periodically save the csv file. (NOTE excel will warn you that there may be incompatible features, just click yes and carry on)</li>
+<li>Look over the data entered to ensure there were no mistakes!</li>
+<li>Save the final data in the csv file in the folder “lab 2 -&gt; Exercise 3”</li>
+<li>Upload data to the exercise 3 portion of the Lab app.<br />
+</li>
+<li>Once the data is loaded, it will appear to the right</li>
+<li>Look over the uploaded data and ensure it looks OK!</li>
+</ol>
+</div>
+<div id="evaluating-w_r" class="section level4">
+<h4>Evaluating <span class="math inline">\(W_{r}\)</span></h4>
+<ol style="list-style-type: decimal">
+<li>Once the data is uploaded enter the <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> parameters for the Largemouth Bass standard weight equation here: <span class="math display">\[{{W}_{s}}={{10}^{-5.528}}\cdot {{L}^{3.273}}\]</span></li>
+<li>Using the length weight equation above calculate the <span class="math inline">\(W_{r}\)</span> for a the <u>5th</u> Largemouth Bass in the dataset as</li>
+</ol>
+<p><span class="math inline">\({{W}_{r}}=\frac{Weigh{{t}_{observed}}}{Weigh{{t}_{s}}}\cdot 100\)</span></p>
+<p><span class="math inline">\(W_{r}\)</span>: __________</p>
+</div>
+<div id="evaluating-w_r-by-fish-length" class="section level4">
+<h4>Evaluating <span class="math inline">\(W_{r}\)</span> by fish length</h4>
+<p>The tab <span class="math inline">\(W_{r}\)</span> versus length plots <span class="math inline">\(W_{r}\)</span> values for the same versus fish length. Save the plot to your folder by right clicking on it.</p>
+</div>
+<div id="evaluating-w_r-by-fish-length-category" class="section level4">
+<h4>Evaluating <span class="math inline">\(W_{r}\)</span> by fish length category</h4>
+<p>Plotting <span class="math inline">\(W_{r}\)</span> by length category can also be an effective way of interpreting <span class="math inline">\(W_{r}\)</span> values. The 5 cells, stock, quality, preferred, memorable, and trophy sizes are commonly used to aggregate <span class="math inline">\(W_{r}\)</span> values. The tab “Wr boxplot” provides a box of <span class="math inline">\(W_{r}\)</span> values by length group. Make sure the correct values of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> for the standard weight equation are in the input boxes.</p>
+<ol style="list-style-type: decimal">
+<li>Make sure the appropriate PSD length are entered in the input box on the right</li>
+<li>Click on the “Wr boxplot” tab</li>
+<li>A boxplot should be present for your data.</li>
+<li>Save the boxplot to the Exercise 3 folder by right clicking on the image.</li>
+</ol>
+<p>EXERCISE 3. QUESTIONS (4 POINTS TOTAL)</p>
+<p>3.1) How did the best fit line from Exercise 2 and the standard weight line compare to each other? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p>3.2) Do the boxplot help interpretation of <span class="math inline">\(W_{r}\)</span> compared to the scatterplot of <span class="math inline">\(W_{r}\)</span> values by fish length? If so, why? (2 points)</p>
+<p><br><br><br><br><br></p>
+<p style="page-break-after:always;">
+</p>
+<p>Table 1.1. Traditional PSD-X values for Largemouth Bass and Bluegill.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Species</th>
+<th>Length category</th>
+<th>Length (mm)</th>
+<th>PSD-X</th>
+<th>N</th>
+<th>PSD value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Largemouth bass</td>
+<td>Stock</td>
+<td>200</td>
+<td>PSD-S</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Quality</td>
+<td>300</td>
+<td>PSD-Q</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Preferred</td>
+<td>380</td>
+<td>PSD-P</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Memorable</td>
+<td>510</td>
+<td>PSD-M</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Trophy</td>
+<td>630</td>
+<td>PSD-T</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td>Bluegill</td>
+<td>Stock</td>
+<td>80</td>
+<td>PSD-S</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Quality</td>
+<td>150</td>
+<td>PSD-Q</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Preferred</td>
+<td>200</td>
+<td>PSD-P</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Memorable</td>
+<td>250</td>
+<td>PSD-M</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Trophy</td>
+<td>300</td>
+<td>PSD-T</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+</tbody>
+</table>
+<p>Table 1.2. Incremental PSD-X-Y values for Largemouth Bass and Bluegill.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Species</th>
+<th>Length category</th>
+<th>Length (mm)</th>
+<th>PSD-X-Y</th>
+<th>N</th>
+<th>PSD Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Largemouth bass</td>
+<td>Stock</td>
+<td>200</td>
+<td>PSD-S-Q</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Quality</td>
+<td>300</td>
+<td>PSD-Q-P</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Preferred</td>
+<td>380</td>
+<td>PSD-P-M</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Memorable</td>
+<td>510</td>
+<td>PSD-M-T</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Trophy</td>
+<td>630</td>
+<td>PSD-T</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td>Bluegill</td>
+<td>Stock</td>
+<td>80</td>
+<td>PSD-S-Q</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Quality</td>
+<td>150</td>
+<td>PSD-Q-P</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Preferred</td>
+<td>200</td>
+<td>PSD-P-M</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Memorable</td>
+<td>250</td>
+<td>PSD-M-T</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Trophy</td>
+<td>300</td>
+<td>PSD-T</td>
+<td>_____</td>
+<td>__________</td>
+</tr>
+</tbody>
+</table>
+<p style="page-break-after:always;">
+</p>
+Table 1.3. PSD values for various fishery types. <!-- compact table-->
+<table style="border-collapse:collapse;border-spacing:0">
+<tr>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top" colspan="3">
+Largemouth bass
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top" colspan="2">
+Bluegill
+</th>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Management strategy
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+PSD-Q
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+PSD-P
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+PSD-M
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+PSD-Q
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+PSD-P
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Panfish
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+20-40
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+0-10
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+0
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+50-80
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+10-30
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Balanced
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+40-70
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+10-40
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+0-10
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+20-60
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+5-20
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Big bass
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+50-80
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+30-60
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+10-25
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+10-50
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+0-10
+</td>
+</tr>
+</table>
+<p><br> Table 2.1. Combinations of <span class="math inline">\(a^\prime\)</span> and <span class="math inline">\(b\)</span> to predict weight from length data for Largemouth Bass. <em>Record values to the nearest decimal point</em></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(a^\prime\)</span></th>
+<th><span class="math inline">\(b\)</span></th>
+<th>Sums of squares residuals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>-5</td>
+<td>3</td>
+<td>____________________</td>
+</tr>
+<tr class="even">
+<td>-5</td>
+<td>2.9</td>
+<td>____________________</td>
+</tr>
+<tr class="odd">
+<td>-5</td>
+<td>3.1</td>
+<td>____________________</td>
+</tr>
+<tr class="even">
+<td>-4.5</td>
+<td>3</td>
+<td>____________________</td>
+</tr>
+<tr class="odd">
+<td>-5</td>
+<td>3</td>
+<td>____________________</td>
+</tr>
+<tr class="even">
+<td>-5.2</td>
+<td>3</td>
+<td>____________________</td>
+</tr>
+<tr class="odd">
+<td>__________</td>
+<td>__________</td>
+<td>____________________</td>
+</tr>
+<tr class="even">
+<td>__________</td>
+<td>__________</td>
+<td>____________________</td>
+</tr>
+<tr class="odd">
+<td>-5</td>
+<td>-3.09</td>
+<td>____________________</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+ </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+<!-- disqus -->
+ <div id="disqus_thread" class="standardPadding"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wfa4313'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            // create disqus script tag
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            // determine container
+            var container = document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0];
+            // append script tag enclosed by google indexing suppression comment
+            container.appendChild(document.createComment('googleoff: all'));
+            container.appendChild(dsq);
+            container.appendChild(document.createComment('googleon: all'));
+        })();
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

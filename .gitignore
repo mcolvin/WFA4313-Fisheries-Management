@@ -7,12 +7,38 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+# ignore output folder
+_Archive/
+_Course-Information/
+_Classes/
+_Laboratories/
+_potential-readings/
+_code/
+_*/
+
+Course-Materials/_archive/
+Course-Materials/_homework/
+Course-Materials/_potential-readings/
+Course-Materials/_site/
+Course-Materials/site_libs/
+Course-Materials/media/
+Course-Materials/Module-01/media/
+Course-Materials/Module-02/media/
+Course-Materials/Module-03/media/
+Course-Materials/Module-04/media/
+Course-Materials/Module-05/media/
 
 # Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
+
+# Office files
+Course-Materials/PDF/*.docx
+*.pptx
+
+
 
 # Windows shortcuts
 *.lnk

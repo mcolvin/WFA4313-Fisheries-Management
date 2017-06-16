@@ -1,0 +1,284 @@
+---
+title: ""
+---
+
+```{r echo=FALSE, out.width="95%"}
+include_graphics("media/Slide10.PNG")
+```
+<!--
+
+library(knitr)
+rmarkdown::render_site("Laboratory-01.Rmd")# build website
+# COPY FILES TO DOCS FOR GITHUB.IO
+system(paste("xcopy", 
+    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"', 
+    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',
+    "/E /C /H /R /K /O /Y")) 
+  q(save="no")  
+
+## To do
+Need to add graph paper for histograms.
+Would be nice to simulate the data from past years....
+-->
+
+
+# WFA4133 Fisheries Science Laboratory 1
+
+## Laboratory overview
+
+Sampling is a fundamental aspect of fisheries science and management.
+Samples are used to estimate quantities, which in turn are used to
+ understand (i.e., science), manage, and regulate fisheries.
+In the simplest case fish length, weight, or both is measured and used
+ to estimate a mean.
+However in fisheries, weight is most commonly measured and used to
+ estimate biomass.
+This is because weight is easy to measure in bulk and therefore fishery
+ landings are measured as biomass. 
+The image below, albeit extreme, illustrates what catch may look like! 
+
+
+```{r echo=FALSE, out.width="95%"}
+include_graphics("media/lotsoffish.jpg")
+```
+
+How do we measure relevant metrics of the catch when there are that many fish?
+*Statistics!*
+In statistics we sample a larger population to *estimate* useful bits
+ of information.
+The objectives of this laboratory are to further your understanding of
+
+* Sampling frames
+* Simple sampling
+* Estimation
+* Bias
+
+This laboratory will consist of 3 exercises designed to simulate
+ common data collection encountered while performing fisheries tasks
+ and varying estimated statistics.
+This lab is worth 10 points.
+
+
+### Laboratory assessment
+
+Laboratory questions to be completed by 5pm of the *next scheduled lab*.
+Answers are to be reported online using the form located here:
+[ http://goo.gl/forms/j92IDo7EMF](http://goo.gl/forms/j92IDo7EMF).
+This link is can also be found under the lab section on the class website for your convenience.
+
+1) What was the true weight of the fish population? (1 point)
+
+<br><br><br><br><br>
+
+2) In exercise 1, how does your estimate of population weight compare to the true population weight for 5 fish?
+What happened when we increased the number of worms weighed from 5 to 10, did it improve? (3 points)
+
+<br><br><br><br><br>
+
+3) In exercise 2, how does the class estimate of population weight compare to the true population weight?
+What do you think will happen if you increase the number of worms by each person from 2 to 4? (3 points)
+
+<br><br><br><br><br>
+
+4) Why do you think it is important to have accurate, precise, and unbiased estimates of a quantity such as weight,
+especially as it relates to fisheries science and management? (3 points)
+
+<br><br><br><br><br>
+
+
+## Exercise 1. Estimating total weight of a population: a grab sample
+
+In this example you will estimate the total weight of a population.
+In this exercise there are 100 fishes in the tub.
+This is the population.
+Let’s get to it. 
+
+1. Take a grab sample of 5 plastic fishes in grams
+2. Tare the digital scale
+3. Weigh them simultaneously
+4. Record the on your index card and report your weight to the instructor
+
+Weight of 5 fishes:___________
+
+5. Estimate the weight of the entire population by multiplying the
+ weight above by 20, record it on your card, and record it below.
+
+Estimated weight of the population:___________
+
+6. Go to white board and color in the histogram cell with your biomass estimate. 
+7. Record the histogram for the class
+ derived data on the graph above. The instructor will help you work
+ through this on the white board. 
+8. Fill in the table below with the summary statistics for the
+ histogram you created in Figure 1 (these will be calculated by the instructor). 
+
+| Metric       	| Value 	|
+|--------------	|:-----:	|
+| Observations 	|       	|
+| Mean         	|       	|
+| Median       	|       	|
+| Minimum      	|       	|
+| Maximum      	|       	|
+| Range        	|       	|
+| Variance     	|       	|
+
+
+Ok, 5 fish really is not that many relative to the 100 fish in the tub.
+Let's see what happens when we take 10 fish.
+
+1. Repeat the steps above but for 10 fish, but use figure 2 for the histogram.
+
+Weight of 10 fishes:___________
+
+2. Estimate the weight of the entire population by multiplying
+the weight above by 10 and record it below.
+
+Estimated weight of the population:___________
+
+3. Fill in the table below with the summary statistics for the
+ histogram you created in Figure 2 (these will be calculated by the instructor). 
+Statistics for the biomass estimate based off of a grab sample of 10 fish.
+
+| Metric       	| Value 	|
+|--------------	|:-----:	|
+| Observations 	|       	|
+| Mean         	|       	|
+| Median       	|       	|
+| Minimum      	|       	|
+| Maximum      	|       	|
+| Range        	|       	|
+| Variance     	|       	|
+
+
+## Exercise 2. Simple sampling
+
+The previous approaches resulted in 20 or so individual
+ biomass estimates.
+However there is no way to estimate the variance of the sample.
+This is because we sampled 5 or 10 fish in a grab sample and replaced
+ the fish in the tub.
+To remedy the lack of variance, a common practice in fisheries is to
+ take measurements on the first 30 fish or so in your catch.
+Let’s simulate this and how you can estimate the total weight
+ of the catch by doing the following:
+
+1. Remove a plastic fish from the tub and weigh it 
+2. Report the weight to the instructor
+3. Record the weight value below, on the card provided, and shade in the right cell on the white board.
+4. Place the processed fish in the tub off to the side
+5. Repeat until you have processed 2 fish
+
+fish weight 1:__________
+
+fish weight 2:__________
+
+6. Record the histogram for the class in Figure 3 towards the end of this document.
+7. Fill in the table below with the summary statistics for
+ the histogram above (your instructor will provide the estimates).
+
+| Metric       	| Value 	|
+|--------------	|:-----:	|
+| Observations 	|       	|
+| Mean         	|       	|
+| Median       	|       	|
+| Minimum      	|       	|
+| Maximum      	|       	|
+| Range        	|       	|
+| Variance     	|       	| 
+ 
+8. Estimate the total weight of the population by multiplying the class
+ mean by 100. 
+ 
+Estimated biomass:__________  
+
+
+
+
+## Exercise 3. Stratified sampling
+
+You may have noticed something in the histogram generated in exercise 3.
+Also we should have found that doing grab samples and the first 30 or so fish
+ results in biased biomass estimates.
+One way to minimize bias of biomass estimates is to stratify the samples.
+In this case we can stratify by size, little and big fish.
+Let’s simulate this and how you can estimate the total weight
+ of the catch and see if we can do better!
+ 
+1. Remove a large fish from the tub and weigh it 
+2. Report the weight to the instructor
+3. Record the weight value below, on the card provided, and shade in the right cell on the white board.
+4. Place the processed fish in the tub off to the side
+5. Repeat until you have processed 2 fish, a large and small one
+
+Large fish weight 1:__________  
+
+Small fish weight 2:__________
+
+6. Fill in the table below reflecting the summary statistics for
+ large and small fish (your instructor will provide the estimates).
+ 
+| Metric       	| Value (lg)| Value (sm)|
+|--------------	|:-----:	|:-----:	|
+| Observations 	|       	|       	|
+| Mean         	|       	|       	|
+| Median       	|       	|       	|
+| Minimum      	|       	|       	|
+| Maximum      	|       	|       	|
+| Range        	|       	|       	|
+| Variance     	|       	|       	|
+ 
+7. Estimate the weighted average of the population by multiplying as 
+ the large fish mean x 0.25 + Small fish mean x 0.75. There are 75 small fish and 25 big fish.
+
+Weighted mean:__________  
+ 
+8. Estimate the population biomass by multiplying the weighted mean by 100 and record below.
+
+Estimated biomass:__________  
+
+
+
+
+
+
+
+
+
+```{r, echo=FALSE}
+plot(runif(1),
+    xlab="Weight (g)",ylab="Frequency",
+    xlim=c(0,300),ylim=c(0,30),type='n',las=1,xaxt='n')
+abline(v=seq(0,300,5),col="lightgrey")
+abline(h=c(0:40),col="lightgrey")  
+axis(1, at=seq(0,300,5),labels=seq(0,300,5),las=2,cex.axis=0.75)  
+box()
+```
+
+Figure 1. Histogram of biomass estimates given 5 fish.
+
+```{r, echo=FALSE}
+plot(runif(1),
+    xlab="Weight (g)",ylab="Frequency",
+    xlim=c(0,300),ylim=c(0,30),type='n',las=1,xaxt='n')
+abline(v=seq(0,300,5),col="lightgrey")
+abline(h=c(0:40),col="lightgrey")  
+axis(1, at=seq(0,300,5),labels=seq(0,300,5),las=2,cex.axis=0.75)  
+box()
+```  
+
+Figure 2. Histogram of biomass estimates given 10 fish.
+
+
+```{r, echo=FALSE}
+plot(runif(1),
+    xlab="Weight (g)",ylab="Frequency",
+    xlim=c(0,4),ylim=c(0,30),type='n',las=1,xaxt='n')
+abline(v=seq(0,50,0.25),col="lightgrey")
+abline(h=c(0:40),col="lightgrey") 
+axis(1, at=seq(0,50,0.25),labels=seq(0,50,0.25),las=2)  
+box()
+```  
+
+Figure 3. Histogram of individual fish weights given a simple sample.
+
+

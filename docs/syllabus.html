@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet"
+      href="site_libs/highlight/textmate.css"
+      type="text/css" />
+<script src="site_libs/highlight/highlight.js"></script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script src="site_libs/navigation-1.0/tabsets.js"></script>
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Course home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Course information
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index.html">Course Home</a>
+    </li>
+    <li>
+      <a href="syllabus.html">Course Syllabus</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Course Content
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="classes.html">Classes</a>
+    </li>
+    <li>
+      <a href="Laboratories.html">Laboratories</a>
+    </li>
+    <li>
+      <a href="Assignments.html">Assignments</a>
+    </li>
+    <li>
+      <a href="Final-Project.html">Final Project</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><img src="media/Slide1.PNG" width="95%" /> <!--
+library(knitr)
+rmarkdown::render_site("syllabus.Rmd")# build website
+# COPY FILES TO DOCS FOR GITHUB.IO
+system(paste("xcopy", 
+    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"', 
+    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',
+    "/E /C /H /R /K /O /Y")) 
+  q(save="no")  
+--></p>
+<div id="wfa-4133-fisheries-science-spring-2017" class="section level1">
+<h1>WFA 4133 Fisheries Science (Spring 2017)</h1>
+<p>Instructor: Dr. Michael E. Colvin<br />
+Office: Thompson 215<br />
+Office phone: 662-325-3592<br />
+Email: <a href="mailto:michael.colvin@msstate.edu">michael.colvin@msstate.edu</a><br />
+Teaching Assistant: Chelsea Gilliland<br />
+Office hour: By appointment<br />
+Lecture: 9-9:50am Mon. and Wed.<br />
+Lab: Monday 1:00-4:50 pm<br />
+Location: Thompson 132</p>
+</div>
+<div id="catalog-description" class="section level1">
+<h1>Catalog description</h1>
+<p>Study of the biological parameters of fish populations.</p>
+</div>
+<div id="required-textbook" class="section level1">
+<h1>Required textbook</h1>
+<p>There is no required textbook. Additional supplementary PDFs will be provided as needed.</p>
+</div>
+<div id="course-background" class="section level1">
+<h1>Course background</h1>
+<p>Contemporary fisheries scientists require diverse skills and abilities to properly design and implement research projects to understand the effects of fishing on fish populations, their habitats, and anglers. Fisheries professionals also must:</p>
+<ul>
+<li>Possess and understand the analytical tools necessary to interpret analyses of fisheries data and use the results to inform management and conservation decisions.<br />
+</li>
+<li>Be able to communicate with natural resource professionals and non-technical stakeholders</li>
+<li>Collaborate with peers from multiple disciplines to successfully complete projects</li>
+<li>Do more with less (e.g., reduced budgets, reduced personnel)</li>
+<li>Do more with more (e.g., big data, data loggers, mark recapture)</li>
+<li>Do your work safely, ethically, and under public scrutiny</li>
+<li>Interact with an increasingly informed public through social media, stakeholder meetings, and daily interactions</li>
+<li>Allow public participation in decision making processes</li>
+</ul>
+</div>
+<div id="course-objectives" class="section level1">
+<h1>Course objectives</h1>
+<p>This course will provide you with a foundation of fisheries science and knowledge of commonly-used analytical techniques employed by fisheries professionals to understand the effects of fishing on fish populations, their habitats, and anglers. By the end of the course, you will be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Define different fishery types, history and application</li>
+<li>Compare and evaluate common practices used to understand and conserve fishes, fisheries and their habitats</li>
+<li>Understand population dynamics and the effects of harvest and propagation</li>
+<li>Calculate dynamic rate functions (i.e., recruitment, growth, and mortality) and population dynamics of fish populations</li>
+<li>Interpret and evaluate stock assessment techniques and their application to management and conservation</li>
+<li>Explain common population indices, including their assumptions, benefits, and limitations</li>
+<li>Demonstrate understanding of scientific writing style, proper citation and reference methods, and organization of scientific reports and papers.</li>
+</ol>
+</div>
+<div id="academic-misconduct" class="section level1">
+<h1>Academic misconduct</h1>
+<p>Academic integrity is serious and all disciplinary action will be taken in the event of academic dishonesty. Mississippi State has an approved Honor Code that applies to all students. The code is as follows: “As a Mississippi State University student, I will conduct myself with honor and integrity at all times. I will not lie, cheat, or steal, nor will I accept the actions of those who do.” Upon accepting admission to Mississippi State University, a student immediately assumes a commitment to uphold the Honor Code, to accept responsibility for learning, and to follow the philosophy and rules of the Honor Code. Student will be required to state their commitment on examinations, research papers, and other academic work. Ignorance of the rules does not exclude any member of the MSU community from the requirements or the processes of the Honor Code. For additional information, please visit: <a href="http://honorcode.msstate.edu/policy" class="uri">http://honorcode.msstate.edu/policy</a>.</p>
+</div>
+<div id="cell-phone-policy" class="section level1">
+<h1>Cell Phone Policy</h1>
+<p>In accordance with Academic Operating Policy 10.08 (approved July 12, 2005) and in order to limit classroom disruptions, as well as to protect against academic misconduct, the use by students of cell phones, messaging devices and other electronic devices is prohibited. In this class, students are required to put cell phone in the silent mode and stow in backpack while attending class and laboratory sessions.</p>
+<p>Cell phones may be used as calculators or clocks at any time during class and laboratory sessions.</p>
+</div>
+<div id="professional-expectations-for-students-in-the-wildlife-fisheries-and-aquaculture-program" class="section level1">
+<h1>Professional Expectations for Students in the Wildlife, Fisheries and Aquaculture Program</h1>
+<p><a href="http://www.cfr.msstate.edu/wildlife/documents/professional_expectations.pdf" class="uri">http://www.cfr.msstate.edu/wildlife/documents/professional_expectations.pdf</a></p>
+</div>
+<div id="assessment-of-student-progress" class="section level1">
+<h1>Assessment of student progress</h1>
+<p>Academic progress will be evaluated using a combination of exams, problem sets, a technical manuscript, in class presentation and participation.</p>
+<ol style="list-style-type: decimal">
+<li>Exams (550 points).—Three exams will be administered during the semester. Exams will consist of multiple choice, short answer, and essay questions, and will focus on your ability to summarize, evaluate, and interpret information using the basic knowledge you have gained in both the lecture and laboratory portions of the course. All exams will be comprehensive—up to the lecture prior to the exam.<br />
+</li>
+<li>Laboratory problem sets (150 points).—During the course laboratory sessions you will develop or be given data set that you will analyze during lab. You will be required to conduct analyses using the tools and techniques provided during the course and labs as teams or individually. Time will be given for you to work on these problem sets during the labs, but additional time may be required outside of class for interpreting the results.<br />
+</li>
+<li>Final laboratory report (150 points).—You will be assigned to a group that will be responsible for writing a report on your group analysis and interpretation of a mock fisheries data set you develop during the course. A detailed description of the report requirements (e.g., format, grade breakdown) will be provided on the class website. Your group will write a technical report that describes the research question or questions of your group’s choice. Grading of the report will be a two-step process that simulates “real-world” experiences you will encounter in your career. First, you will submit a draft of the report that will be graded and returned to your group with detailed comments. After revision, a final version of the report will be submitted and a final grade will be assigned.<br />
+</li>
+<li>Presentation (100 points).—During the final week’s laboratory you will be required to present the details of your group report as a 20 minute oral presentation.<br />
+</li>
+<li>Class assignments and quizzes (50 points).—Part of being a fisheries scientist is actively participating in class and classwork. Class assignments will be used as needed to ensure comprehension of topics and quizzes will be used to assess in class retention.</li>
+</ol>
+<div id="summary-of-evaluations" class="section level2">
+<h2>Summary of evaluations:</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Task</th>
+<th align="center">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exam I</td>
+<td align="center">150</td>
+</tr>
+<tr class="even">
+<td>Exam I</td>
+<td align="center">150</td>
+</tr>
+<tr class="odd">
+<td>Exam III comprehensive</td>
+<td align="center">250</td>
+</tr>
+<tr class="even">
+<td>Laboratory problem sets</td>
+<td align="center">150</td>
+</tr>
+<tr class="odd">
+<td>Laboratory report</td>
+<td align="center">150</td>
+</tr>
+<tr class="even">
+<td>Report presentation</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td>Class assignments and quizzes</td>
+<td align="center">50</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td align="center">1000**</td>
+</tr>
+</tbody>
+</table>
+<p>** If the total number of predetermined points are not achieved during the semester, the number of points will be adjusted to equal the original amount and the total sums to 1000. For example if only 40 points of class assignments are given and you earn 38 out of 40 points, that 38 will become 47.5 (38x50/40) for the purpose of calculating final grades. This policy applies to all evaluation tasks in the table above.</p>
+</div>
+<div id="grading-scale" class="section level2">
+<h2>Grading Scale</h2>
+<p>A= 895 to 1000 B = 795 to 894 C = 695 to 794 D = 595 to 694 F = 0 to 594</p>
+</div>
+</div>
+<div id="late-assignment-policy" class="section level1">
+<h1>Late assignment policy</h1>
+<p>Late assignments and missed exams: All assignments must be turned in on time. Late assignments may be graded, but the maximum point value will be reduced by 10% for every day the assignment is late; however, assignments will not be graded if they are turned in after assignments grades are posted on blackboard. If for some reason there is a timing conflict associated with an exam, discuss these conflicts with me at least two weeks prior to the scheduled date.</p>
+<p>Other Class Policies</p>
+<ul>
+<li>Missed classes &amp; laboratories—If you need to miss class for an excusable reason notify me one week in advance. I will not be responsible for providing content to students who missed class or laboratory without a qualified excuse.</li>
+<li>Missed exams—You will not be allowed to take or retake exams if you miss them and do not have a qualifying excuse.</li>
+<li>Qualifying excused absences—Potential qualifying excuses for missed classes, laboratories, or lecture fall under 3 categories:
+<ol style="list-style-type: decimal">
+<li>Illness or other physical injury. I recognize you cannot control these and if you are sick by all means get better. If you anticipate requiring some makeup of lecture material, laboratory, or exam an excuse from the doctor is required.<br />
+</li>
+<li>Emergency or accident. Again these are uncontrollable instances and these will be reviewed on a case by case basis between the student and instructor. Instances of work duties, meeting the cable person, or other similar circumstances do not constitute emergencies.</li>
+<li>Unique work experience. There are instances where unique work and research experiences do occur that will require you to miss class, laboratories, or exams. These are likely to be known well in advance and therefore the same 2 week late assignment policy applies here. These instances will be reviewed on a case by case basis. Missing class elements to perform your typical work duties do not apply, however some work instances may fit (e.g., a weeklong trip to sample critters on the coast) and are best discussed with the instructor at least 2 weeks prior to the event.</li>
+</ol></li>
+</ul>
+</div>
+<div id="important-dates" class="section level1">
+<h1>Important Dates</h1>
+<!--
+from _course-information/meta.xlsx
+-->
+<table>
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Last day to drop a class without a grade</td>
+<td>Friday, January 13, 2017</td>
+</tr>
+<tr class="even">
+<td>Last day to add a class</td>
+<td>Tuesday, January 17, 2017</td>
+</tr>
+<tr class="odd">
+<td>First progress reporting</td>
+<td>Monday, February 20, 2017</td>
+</tr>
+<tr class="even">
+<td>Last day to course with a “W” grade</td>
+<td>Tuesday, February 28, 2017</td>
+</tr>
+<tr class="odd">
+<td>Second progress reporting</td>
+<td>Friday, March 24, 2017</td>
+</tr>
+<tr class="even">
+<td>Last day to withdraw from the university</td>
+<td>Tuesday, April 11, 2017</td>
+</tr>
+<tr class="odd">
+<td>Classes end</td>
+<td>Wednesday, April 26, 2017</td>
+</tr>
+<tr class="even">
+<td>Reading day(s)</td>
+<td>Thursday, April 27, 2017</td>
+</tr>
+<tr class="odd">
+<td>Final Exam</td>
+<td>Wednesday, May 03, 2017 8-11 am</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="students-with-disabilities" class="section level1">
+<h1>Students with Disabilities</h1>
+<p>Accommodations are collaborative efforts between students, faculty and Disability Support Services (DSS). Students with accommodations approved through DSS are responsible for contacting the faculty member in charge of the course prior to or during the first week of the term to discuss accommodations. Students who believe they are eligible for accommodations but who have not yet obtained approval through DSS should contact DSS immediately at (662) 325-3335.</p>
+</div>
+<div id="title-ix" class="section level1">
+<h1>Title IX</h1>
+<p>MSU is committed to complying with Title IX, a federal law that prohibits discrimination, including violence and harassment, based on sex. This means that MSU’ s educational programs and activities must be free from sex discrimination, sexual harassment, and other forms of sexual misconduct. If you or someone you know has experienced sex discrimination, sexual violence and/or harassment by any member of the University community, you are encouraged to report the conduct to MSU’ s Director of Title IX/EEO Programs at 325-8124 or by e-mail to <a href="mailto:titleix@msstate.edu">titleix@msstate.edu</a>. Additional resources are available at:</p>
+<ul>
+<li><a href="http://www.msstate.edu/web/security/title9-12.pdf" class="uri">http://www.msstate.edu/web/security/title9-12.pdf</a>, or</li>
+<li><a href="http://students.msstate.edu/sexualmisconduct/" class="uri">http://students.msstate.edu/sexualmisconduct/</a>.</li>
+</ul>
+</div>
+<div id="provisional-class-schedule" class="section level1">
+<h1>Provisional Class Schedule</h1>
+<p>Classes and laboratory time subject to change with instructor availability.</p>
+<table>
+<colgroup>
+<col width="32%" />
+<col width="37%" />
+<col width="29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Monday Class</th>
+<th>Monday Lab</th>
+<th>Wednesday Class</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Introduction to Fisheries Profession &amp; Science</td>
+<td>1. Sampling, summary statistics, dispersion, &amp; estimation</td>
+<td>2. Science &amp; Sampling</td>
+</tr>
+<tr class="even">
+<td>3. No class-University holiday</td>
+<td>No laboratory university holiday</td>
+<td>4. Population Size Structure</td>
+</tr>
+<tr class="odd">
+<td>5. Length, Weight, &amp; Condition</td>
+<td>2. Sampling &amp; size structure</td>
+<td>6. Growth</td>
+</tr>
+<tr class="even">
+<td>7. Population Dynamics</td>
+<td>No Laboratory</td>
+<td>8. Recruitment</td>
+</tr>
+<tr class="odd">
+<td>9. Recruitment continued</td>
+<td>3. Length, Weight, &amp; Growth</td>
+<td>10. Survival</td>
+</tr>
+<tr class="even">
+<td>11. Mortality and harvest</td>
+<td>4. Recruitment &amp; Survival</td>
+<td>12. Exam I</td>
+</tr>
+<tr class="odd">
+<td>13. No class-instructor out of town</td>
+<td>No laboratory</td>
+<td>14. Guest lecture on Fisheries Experiences</td>
+</tr>
+<tr class="even">
+<td>15. Population &amp; harvest dynamics</td>
+<td>5. Population &amp; harvest dynamics</td>
+<td>16. Harvest theory</td>
+</tr>
+<tr class="odd">
+<td>17. Harvest, gear, effort, &amp; yield</td>
+<td>6. Harvest theory &amp; sustainability</td>
+<td>18. Harvest, gear, effort, &amp; yield continued</td>
+</tr>
+<tr class="even">
+<td>19. No class spring break</td>
+<td>No laboratory spring break</td>
+<td>20. No class spring break</td>
+</tr>
+<tr class="odd">
+<td>21. No class -instructor out of town</td>
+<td>No laboratory</td>
+<td>22. No class -instructor out of town</td>
+</tr>
+<tr class="even">
+<td>23. Overfishing</td>
+<td>7. Catch, effort, &amp; catchability</td>
+<td>24. Yield Models</td>
+</tr>
+<tr class="odd">
+<td>25. Exam II</td>
+<td>8. Fishery Assessment</td>
+<td>26. Habitat &amp; trophic ecology</td>
+</tr>
+<tr class="even">
+<td>27. Habitat &amp; trophic ecology continued</td>
+<td>9. Writing &amp; presentation of scientific results</td>
+<td>28. Stream Habitat</td>
+</tr>
+<tr class="odd">
+<td>29. Supplementation &amp; hatcheries</td>
+<td>10. Open session to work on final projects &amp; presentations</td>
+<td>30. Interactions</td>
+</tr>
+<tr class="even">
+<td>31. Interactions continued</td>
+<td>11. Final laboratory presentations</td>
+<td>32. Final Exam Review</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+ </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+<!-- disqus -->
+ <div id="disqus_thread" class="standardPadding"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wfa4313'; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            // create disqus script tag
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            // determine container
+            var container = document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0];
+            // append script tag enclosed by google indexing suppression comment
+            container.appendChild(document.createComment('googleoff: all'));
+            container.appendChild(dsq);
+            container.appendChild(document.createComment('googleon: all'));
+        })();
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
