@@ -1,0 +1,29 @@
+---
+title: "Main"
+output: 
+  html_document:
+    includes:
+      in_header: header_banner.html 
+---
+
+<!--
+library(knitr)
+rmarkdown::render_site("index.Rmd")# build website
+
+rmarkdown::render_site()# build website
+
+
+-->
+
+## Syllabus
+
+[Course syllabus](syllabus.html)
+
+## Final exam
+
+* Final Exam is scheduled for Wednesday, May 03, 2017 8-11 am!!!!
+
+Centralmaine.com: Trump appointee reverses fisheries managers over flounder fishing. http://google.com/newsstand/s/CBIwjdfcvTU
+
+Who Gets To Fish For Red Snapper In The Gulf? It's All Politics. http://google.com/newsstand/s/CBIwpPXIsTU
+Who Gets To Fish For Red Snapper In The Gulf? It's All Politics. http://google.com/newsstand/s/CBIwpPXIsTU

@@ -1,0 +1,130 @@
+---
+title: "WFA 4313/6313 Fisheries Science (Fall 2017)"
+output: 
+  html_document:
+    includes:
+      in_header: header_banner.html 
+---
+
+<!--
+library(knitr)
+rmarkdown::render_site("index.Rmd")# build website
+
+rmarkdown::render_site()# build website
+
+
+-->
+
+Instructor: Dr. Michael E. Colvin  
+Office: Thompson 215  
+Office phone: 662-325-3592  
+Email: michael.colvin@msstate.edu  
+Office hour(s): By appointment  
+Lecture (M, W): THMANX 208, 8-8:50 am   
+Lab (T): THMANX 313, 1:00-4:50 pm  
+  
+## Catalog description
+
+Principles of fisheries management and methods for assessment and analysis of fish populations and aquatic habitats.  Two hours lecture. 
+
+## Textbook and course material
+
+There is no required textbook for this class, supplementary PDFs will be provided as needed and available on the course Blackboard site
+Course background
+
+Contemporary fisheries managers require diverse skills and abilities to properly identify management actions and alternatives, as well as implement management programs.  Additionally, developing monitoring programs for fish, habitat, and anglers is essential to evaluate management actions.  Fisheries professionals also must:
+
+* Possess and understand the analytical tools necessary to interpret analyses of fisheries data and use the results to inform management and conservation decisions.  
+* Be able to communicate with natural resource professionals and non-technical stakeholders
+* Collaborate with peers from multiple disciplines to successfully complete projects
+* Do more with less (e.g., reduced budgets, reduced personnel)
+* Do more with more (e.g., big data, data loggers, mark recapture)
+* Do your work safely, ethically, and under public scrutiny
+* Interact with an increasingly informed public through social media, stakeholder meetings, and daily interactions
+* Allow public participation in decision making and management processes
+
+## Course objectives
+
+This course will provide you with a foundation of fisheries management and knowledge of commonly-used analytical techniques employed by fisheries managers to manage fisheries
+By the end of the course, you will be able to:
+
+1. Define different fishery types, history and application
+1. Compare and evaluate common practices used to manage and conserve fishes, fisheries and their habitats
+1. Understand population dynamics and the effects of harvest and propagation
+1. Calculate dynamic rate functions (i.e., recruitment, growth, and mortality) and population dynamics of fish populations
+1. Interpret and evaluate stock assessment techniques and their application to management and conservation
+1. Explain common population indices, including their assumptions, benefits, and limitations
+1. Understand contemporary management of natural resources
+
+## Academic misconduct
+
+Academic integrity is serious and all disciplinary action will be taken in the event of academic dishonesty.  Mississippi State has an approved Honor Code that applies to all students. The code is as follows: "As a Mississippi State University student, I will conduct myself with honor and integrity at all times. I will not lie, cheat, or steal, nor will I accept the actions of those who do." Upon accepting admission to Mississippi State University, a student immediately assumes a commitment to uphold the Honor Code, to accept responsibility for learning, and to follow the philosophy and rules of the Honor Code. Student will be required to state their commitment on examinations, research papers, and other academic work. Ignorance of the rules does not exclude any member of the MSU community from the requirements or the processes of the Honor Code. For additional information, please visit: http://honorcode.msstate.edu/policy.
+
+## Cell Phone Policy
+
+In accordance with Academic Operating Policy 10.08 (approved July 12, 2005) and in order to limit classroom disruptions, as well as to protect against academic misconduct, the use by students of cell phones, messaging devices and other electronic devices is prohibited. In this class, students are required to put cell phone in the silent mode and stow in backpack while attending class and laboratory sessions. Cell phones may be used as calculators or clocks at any time during class and laboratory sessions.
+
+Professional Expectations for Students in the Wildlife, Fisheries and Aquaculture Program 
+
+http://www.cfr.msstate.edu/wildlife/documents/professional_expectations.pdf
+
+## Assessment of student progress
+
+### 4313/6313 Students
+
+Academic progress will be evaluated using a combination of exams, problem sets, a technical manuscript, in class presentation and participation.
+
+1. Exams (450 points).—Three exams will be administered during the semester.  Exams will consist of short answer and essay questions, and will focus on your ability to summarize, evaluate, and interpret information using the basic knowledge you have gained in both the lecture and laboratory portions of the course.  
+2. Laboratory problem sets (200 points).—During the course laboratory sessions you will develop or be given data set that you will analyze during lab and your own time.  You will be required to conduct analyses using the tools and techniques provided during the course and labs as teams or individually.  Time will be given for you to work on these problem sets during the labs, but additional time may be required outside of class for interpreting the results.  
+3. Management brief (250 points total).—Contemporary fishery managers need to be able to communicate research and management actions to stakeholders using a variety of media.  This may include Facebook, Twitter, articles in popular magazines (e.g., Field and Stream, Mississippi Outdoors), and orally in public meetings.  During the semester you will select a published manuscript from an established fisheries journal and provide the following:
+    a. A management brief (175 points):  a summary brief of the article that would be appropriate for a popular outlet.  There are no word limits for this, with all writing you should only use the number of words needed to accurately and succinctly convey your message.  Grading of your brief will be a two-step process that simulates “real-world” experiences you will encounter in your career.  First, you will submit a draft of the brief that will be graded and returned to you with detailed comments.  After revision, a final version of the brief will be submitted and a final grade will be assigned.  
+    b. Presentation (75 points).—During the final week of laboratory you will be required to present the details of the paper you selected as brief 5 minute oral presentation.  
+4. Class assignments and participation (100 points).—Part of being a fisheries manager is actively participating in discussions.  The majority of fisheries management is working with people, not fish!  You must be present in class and an actively participant in discussions and team work. 
+
+### Summary of evaluations:
+Task						Points	
+Exam I			  			125
+Exam II		  			125
+Exam III (Final)				200
+Laboratory problem sets  			200
+Management brief 	  			250
+Class assignments and participation	   	100
+Total						1000			
+
+### 6313 Students- Management model and description
+Students enrolled in WFA6313 are required to develop a management model of their research system using STELLA.  The model should include at least: 3 state variables, 2 hypotheses, and a decision utility.  The final deliverable will be a report describing the model and a working STELLA model.  Guidelines will be posted on the course Blackboard site.  
+
+### Grading Scale
+
+A= 895 to 1000  	B = 795 to 894		C = 695 to 794		D = 595 to 694
+F = 0 to 594
+
+Late assignments and missing exam policies
+
+All assignments must be turned in on time.  Late assignments may be graded, but the maximum point value will be reduced by 5% for every day the assignment is late; however, assignments will not be graded if they are turned in after graded assignments are returned to the class.  If for some reason there is a timing conflict associated with an exam, discuss these conflicts with me at least two weeks prior to the scheduled date.
+
+## Important Dates
+
+* Last day to drop a class without a grade – August 22
+* Last day to add a class – August 23
+* Last day to drop course with a "W" grade – October 5
+* Last day to withdraw from the university – November 11
+* Final exam – Wednesday December 7:  8am – 11am
+
+Students with Disabilities
+
+Accommodations are collaborative efforts between students, faculty and Disability Support Services (DSS). Students with accommodations approved through DSS are responsible for contacting the faculty member in charge of the course prior to or during the first week of the term to discuss accommodations. Students who believe they are eligible for accommodations but who have not yet obtained approval through DSS should contact DSS immediately at (662) 325-3335.
+
+## Title IX
+
+MSU is committed to complying with Title IX, a federal law that prohibits discrimination, including violence and harassment, based on sex. This means that MSU' s educational programs and activities must be free from sex discrimination, sexual harassment, and other forms of sexual misconduct. If you or someone you know has experienced sex discrimination, sexual violence and/or harassment by any member of the University community, you are encouraged to report the conduct to MSU' s Director of Title IX/EEO Programs at 325-8124 or by e-mail to titleix@msstate.edu. Additional resources are available at:
+* http://www.msstate.edu/web/security/title9-12.pdf, or 
+* http://students.msstate.edu/sexualmisconduct/
+
+  
+## Tentative Lecture and Lab Schedule
+
+MOVE TO ITS OWN THING.. CALENDER FA-ICON
+
+
+

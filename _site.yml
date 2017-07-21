@@ -1,0 +1,42 @@
+name: "wfa4313"
+navbar:
+  title: "WFA4313/6313"
+  left:
+    - text: "Course information"
+      menu:
+        - text: "Course Home"
+          href: "index.html"      
+        - text: "Course Syllabus"
+          href: "syllabus.html"
+    - text: "Course Content"
+      menu: 
+        - text: "Classes"
+          href: "classes.html"  
+        - text: "Laboratories"
+          href: "Laboratories.html"  
+        - text: "Assignments"
+          href: "Assignments.html"           
+        - text: "Final Project"
+          href: "Final-Project.html" 
+  right:
+    - text: "Classes"
+      icon: fa-files-o
+      href: index.html     
+    - text: "Labs"
+      icon: fa-line-chart
+      href: index.html   
+    - text: "Class schedule"
+      icon: fa-calendar
+      href: index.html      
+output_dir: "docs"
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    includes:
+      in_header: NULL
+      before_body: NULL
+      after_body: include_footer.html    
+    
+
+    

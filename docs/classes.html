@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -19,12 +19,12 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -94,6 +94,7 @@ button.code-folding-btn:focus {
 }
 </style>
 
+
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
@@ -150,7 +151,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.0/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -172,7 +172,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Course home</a>
+      <a class="navbar-brand" href="index.html">WFA4313/6313</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -214,7 +214,27 @@ $(document).ready(function () {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="index.html">
+    <span class="fa fa-files-o"></span>
+     
+    Classes
+  </a>
+</li>
+<li>
+  <a href="index.html">
+    <span class="fa fa-line-chart"></span>
+     
+    Labs
+  </a>
+</li>
+<li>
+  <a href="index.html">
+    <span class="fa fa-calendar"></span>
+     
+    Class schedule
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -235,20 +255,45 @@ rmarkdown::render_site("Classes.Rmd")# build website
 
 # COPY FILES TO DOCS FOR GITHUB.IO
 # rmarkdown::render_site()# build website
-system(paste("xcopy", 
-    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"', 
-    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',
-    "/E /C /H /R /K /O /Y")) 
-  q(save="no")  
+# system(paste("xcopy", "C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"',     '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',     "/E /C /H /R /K /O /Y"));q(save="no")  
 
 --></p>
 <div id="classes" class="section level2">
 <h2>Classes</h2>
-<div id="class-25-final-review" class="section level3">
-<h3>Class 25: Final review</h3>
-<p>asdlkfas;ldkjfal;skdfj</p>
-<p>asdflka;sldfj</p>
-</div>
+<ol style="list-style-type: decimal">
+<li>History of fisheries management</li>
+<li>Fisheries management overview
+<ol style="list-style-type: decimal">
+<li>Public trust resource</li>
+<li>North American conservation model</li>
+<li>Fishery types</li>
+</ol></li>
+<li>Governance and management process
+<ol style="list-style-type: decimal">
+<li>State
+<ol style="list-style-type: decimal">
+<li>Inland freshwater</li>
+<li>Marine (shellfish, resident fish)</li>
+</ol></li>
+<li>Multistate (mobile interjurisdictional fisheries)
+<ol style="list-style-type: decimal">
+<li>Inland freshwater</li>
+<li>Marine</li>
+</ol></li>
+<li>Diadromous
+<ol style="list-style-type: decimal">
+<li>State</li>
+<li>interjurisdictional</li>
+</ol></li>
+<li>Tribal</li>
+</ol></li>
+<li>Fisheries and management types</li>
+<li>Population dynamics</li>
+<li>Management objectives
+<ol style="list-style-type: decimal">
+<li>HW-creating objectives</li>
+</ol></li>
+</ol>
 </div>
 
  </div> <!-- articleBandContent -->
@@ -284,9 +329,13 @@ system(paste("xcopy",
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
+
 
 </script>
 
@@ -295,7 +344,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
