@@ -8,7 +8,7 @@ output:
 ---
 <!--
 library(knitr)
-rmarkdown::render_site("classes.Rmd")# build website
+rmarkdown::render_site("assignments.Rmd")# build website
 -->
 
 
