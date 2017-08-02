@@ -2,8 +2,6 @@
 title: "WFA4313/6313 Fisheries Management"
 output: 
   html_document:
-    excludes: 
-      after_body: _includes/include_footer.html
     includes:
       after_body: _includes/include_footer-no-disqus.html
       in_header: _includes/header_banner.html 

@@ -12,7 +12,7 @@ rmarkdown::render_site("assignments.Rmd")# build website
 -->
 
 
-# Assignments
+# assignments
 
 * lkdla;kfas;ldfj;
     1. Provide 1 multiple choice question you believe is a good candidate for a final exam question
