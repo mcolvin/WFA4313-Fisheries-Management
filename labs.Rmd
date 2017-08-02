@@ -1,5 +1,5 @@
 ---
-title: "WFA 4313/6313 Fisheries Science"
+title: "WFA4313/6313 Fisheries Management"
 output: 
   html_document:
     includes:
