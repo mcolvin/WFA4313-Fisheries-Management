@@ -1,33 +1,28 @@
 name: "wfa4313"
 navbar:
   title: "WFA4313/6313"
-  left:
-    - text: "Course information"
-      menu:
-        - text: "Course Home"
-          href: "index.html"      
-        - text: "Course Syllabus"
-          href: "syllabus.html"
-    - text: "Course Content"
-      menu: 
-        - text: "Classes"
-          href: "classes.html"  
-        - text: "Laboratories"
-          href: "Laboratories.html"  
-        - text: "Assignments"
-          href: "Assignments.html"           
-        - text: "Final Project"
-          href: "Final-Project.html" 
   right:
     - text: "Classes"
       icon: fa-files-o
-      href: index.html     
+      href: classes.html     
     - text: "Labs"
       icon: fa-line-chart
-      href: index.html   
-    - text: "Class schedule"
+      href: labs.html  
+    - text: "Assignments"
+      icon: fa-pencil-square-o
+      href: assignments.html       
+    - text: "Schedule"
       icon: fa-calendar
-      href: index.html      
+      href: schedule.html       
+    - text: "Literature"
+      icon: fa-book     
+      href: literature.html 
+    - text: "Syllabus"
+      icon: fa-file-text
+      href: syllabus.html       
+    - text: "Email"
+      icon: fa-envelope-o
+      href: mailto:michael.colvin@msstate.edu?Subject=WFA4313
 output_dir: "docs"
 output:
   html_document:

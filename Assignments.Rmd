@@ -1,24 +1,20 @@
 ---
-title: ""
+title: "WFA4313/6313 Fisheries Science"
+output: 
+  html_document:
+    excludes: 
+      after_body: _includes/include_footer.html
+    includes:
+      after_body: _includes/include_footer-no-disqus.html
+      in_header: _includes/header_banner.html 
 ---
-
-```{r echo=FALSE, out.width="95%"}
-include_graphics("media/Slide7.PNG")
-```
 <!--
-
 library(knitr)
-rmarkdown::render_site("Assignments.Rmd")# build website
-# COPY FILES TO DOCS FOR GITHUB.IO
-system(paste("xcopy", 
-    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"', 
-    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',
-    "/E /C /H /R /K /O /Y")) 
-  q(save="no")  
-
+rmarkdown::render_site("classes.Rmd")# build website
 -->
 
-## Assignments
+
+# Assignments
 
 * lkdla;kfas;ldfj;
     1. Provide 1 multiple choice question you believe is a good candidate for a final exam question

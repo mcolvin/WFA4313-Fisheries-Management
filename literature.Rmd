@@ -1,0 +1,20 @@
+---
+title: "WFA4313/6313 Fisheries Science"
+output: 
+  html_document:
+    excludes: 
+      after_body: _includes/include_footer.html
+    includes:
+      after_body: _includes/include_footer-no-disqus.html
+      in_header: _includes/header_banner.html 
+---
+
+<!--
+library(knitr)
+rmarkdown::render_site("literature.Rmd")# build website
+rmarkdown::render_site()# build website
+-->
+
+
+# Course literature
+asdfasdfasf

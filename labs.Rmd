@@ -1,22 +1,14 @@
 ---
-title: ""
+title: "WFA 4313/6313 Fisheries Science"
+output: 
+  html_document:
+    includes:
+      after_body: _includes/include_footer.html
+      in_header: _includes/header_banner.html 
 ---
-
-```{r echo=FALSE, out.width="95%"}
-include_graphics("media/Slide2.PNG")
-```
 <!--
-
 library(knitr)
-rmarkdown::render_site("Laboratories.Rmd")# build website
-#rmarkdown::render_site()# build website
-# COPY FILES TO DOCS FOR GITHUB.IO
-system(paste("xcopy", 
-    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Course-Materials/_site"', 
-    '"C:/Users/mcolvin/Documents/Teaching/WFA4133-Fisheries-Science/Docs"',
-    "/E /C /H /R /K /O /Y")) 
-  q(save="no")  
-
+rmarkdown::render_site("labs.Rmd")# build website
 -->
 
 # WFA4133-Fisheries Science Laboratories

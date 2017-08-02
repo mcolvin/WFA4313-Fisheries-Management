@@ -1,29 +1,41 @@
 ---
-title: "Main"
+title: "WFA4313/6313 Fisheries Science"
 output: 
   html_document:
+    excludes: 
+      after_body: _includes/include_footer.html
     includes:
-      in_header: header_banner.html 
+      after_body: _includes/include_footer-no-disqus.html
+      in_header: _includes/header_banner.html 
 ---
 
 <!--
 library(knitr)
 rmarkdown::render_site("index.Rmd")# build website
-
 rmarkdown::render_site()# build website
-
-
 -->
 
-## Syllabus
+# Course announcements
 
-[Course syllabus](syllabus.html)
+* Welcome to class! 
+    * You can see the course schedule [here](schedule.html) and syllabus [here](syllabus.html). 
+    * We will not have class next week due to the Annual AFS meeting in Tampa.
 
-## Final exam
+
+
+<!--
+NPR: To Help Keep Sturgeon Sustainable, Farm And Fishery Work Together. http://google.com/newsstand/s/CBIw7tWXzjI
+
 
 * Final Exam is scheduled for Wednesday, May 03, 2017 8-11 am!!!!
 
 Centralmaine.com: Trump appointee reverses fisheries managers over flounder fishing. http://google.com/newsstand/s/CBIwjdfcvTU
+http://www.providencejournal.com/opinion/20170721/my-turn-ben-landry-have-honest-discussion-on-fishing
+Who Gets To Fish For Red Snapper In The Gulf? It's All Politics. http://google.com/newsstand/s/CBIwpPXIsTU
 
-Who Gets To Fish For Red Snapper In The Gulf? It's All Politics. http://google.com/newsstand/s/CBIwpPXIsTU
-Who Gets To Fish For Red Snapper In The Gulf? It's All Politics. http://google.com/newsstand/s/CBIwpPXIsTU
+Conservation groups sue to stop snapper season extension http://fisherynation.com/archives/61459
+
+http://oneanglersvoyage.blogspot.com/2017/07/tarnished-halos-anglers-conservation.html?m=1
+
+http://www.capitalpress.com/Water/20170718/irrigators-want-investigation-of-fish-management
+-->

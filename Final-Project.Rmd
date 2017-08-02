@@ -1,10 +1,11 @@
 ---
-title: ""
+title: "WFA 4313/6313 Fisheries Science"
+output: 
+  html_document:
+    includes:
+      after_body: _includes/include_footer.html
+      in_header: _includes/header_banner.html 
 ---
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("media/Slide8.PNG")
-```
 <!--
 
 rmarkdown::render_site("Final-Project.Rmd")# build website

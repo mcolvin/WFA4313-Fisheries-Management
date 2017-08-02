@@ -11,7 +11,7 @@
 
 
 
-<title>Main</title>
+<title>WFA4313/6313 Fisheries Science</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -177,63 +177,56 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Course information
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="index.html">Course Home</a>
-    </li>
-    <li>
-      <a href="syllabus.html">Course Syllabus</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Course Content
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="classes.html">Classes</a>
-    </li>
-    <li>
-      <a href="Laboratories.html">Laboratories</a>
-    </li>
-    <li>
-      <a href="Assignments.html">Assignments</a>
-    </li>
-    <li>
-      <a href="Final-Project.html">Final Project</a>
-    </li>
-  </ul>
-</li>
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="index.html">
+  <a href="classes.html">
     <span class="fa fa-files-o"></span>
      
     Classes
   </a>
 </li>
 <li>
-  <a href="index.html">
+  <a href="labs.html">
     <span class="fa fa-line-chart"></span>
      
     Labs
   </a>
 </li>
 <li>
-  <a href="index.html">
+  <a href="assignments.html">
+    <span class="fa fa-pencil-square-o"></span>
+     
+    Assignments
+  </a>
+</li>
+<li>
+  <a href="schedule.html">
     <span class="fa fa-calendar"></span>
      
-    Class schedule
+    Schedule
+  </a>
+</li>
+<li>
+  <a href="literature.html">
+    <span class="fa fa-book"></span>
+     
+    Literature
+  </a>
+</li>
+<li>
+  <a href="syllabus.html">
+    <span class="fa fa-file-text"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="mailto:michael.colvin@msstate.edu?Subject=WFA4313">
+    <span class="fa fa-envelope-o"></span>
+     
+    Email
   </a>
 </li>
       </ul>
@@ -245,7 +238,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Main</h1>
+<h1 class="title toc-ignore">WFA4313/6313 Fisheries Science</h1>
 
 </div>
 
@@ -253,49 +246,37 @@ $(document).ready(function () {
 <!--
 library(knitr)
 rmarkdown::render_site("index.Rmd")# build website
-
 rmarkdown::render_site()# build website
-
-
 -->
-<div id="syllabus" class="section level2">
-<h2>Syllabus</h2>
-<p><a href="syllabus.html">Course syllabus</a></p>
-</div>
-<div id="final-exam" class="section level2">
-<h2>Final exam</h2>
+<div id="course-announcements" class="section level1">
+<h1>Course announcements</h1>
 <ul>
-<li>Final Exam is scheduled for Wednesday, May 03, 2017 8-11 am!!!!</li>
+<li>Welcome to class!
+<ul>
+<li>You can see the course schedule <a href="schedule.html">here</a> and syllabus <a href="syllabus.html">here</a>.</li>
+<li>We will not have class next week due to the Annual AFS meeting in Tampa.</li>
+</ul></li>
 </ul>
-<p>Centralmaine.com: Trump appointee reverses fisheries managers over flounder fishing. <a href="http://google.com/newsstand/s/CBIwjdfcvTU" class="uri">http://google.com/newsstand/s/CBIwjdfcvTU</a></p>
-<p>Who Gets To Fish For Red Snapper In The Gulf? It’s All Politics. <a href="http://google.com/newsstand/s/CBIwpPXIsTU" class="uri">http://google.com/newsstand/s/CBIwpPXIsTU</a> Who Gets To Fish For Red Snapper In The Gulf? It’s All Politics. <a href="http://google.com/newsstand/s/CBIwpPXIsTU" class="uri">http://google.com/newsstand/s/CBIwpPXIsTU</a></p>
+<!--
+NPR: To Help Keep Sturgeon Sustainable, Farm And Fishery Work Together. http://google.com/newsstand/s/CBIw7tWXzjI
+
+
+* Final Exam is scheduled for Wednesday, May 03, 2017 8-11 am!!!!
+
+Centralmaine.com: Trump appointee reverses fisheries managers over flounder fishing. http://google.com/newsstand/s/CBIwjdfcvTU
+http://www.providencejournal.com/opinion/20170721/my-turn-ben-landry-have-honest-discussion-on-fishing
+Who Gets To Fish For Red Snapper In The Gulf? It's All Politics. http://google.com/newsstand/s/CBIwpPXIsTU
+
+Conservation groups sue to stop snapper season extension http://fisherynation.com/archives/61459
+
+http://oneanglersvoyage.blogspot.com/2017/07/tarnished-halos-anglers-conservation.html?m=1
+
+http://www.capitalpress.com/Water/20170718/irrigators-want-investigation-of-fish-management
+-->
 </div>
 
  </div> <!-- articleBandContent -->
 </div> <!-- pageContent -->
-
-<!-- disqus -->
- <div id="disqus_thread" class="standardPadding"></div>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'wfa4313'; // required: replace example with your forum shortname
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            // create disqus script tag
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            // determine container
-            var container = document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0];
-            // append script tag enclosed by google indexing suppression comment
-            container.appendChild(document.createComment('googleoff: all'));
-            container.appendChild(dsq);
-            container.appendChild(document.createComment('googleon: all'));
-        })();
-      });
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 
