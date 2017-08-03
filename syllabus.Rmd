@@ -8,12 +8,10 @@ output:
 ---
 
 <!--
+Update lines 199 and 220 if new class.
 library(knitr)
 rmarkdown::render_site("syllabus.Rmd")# build website
-
 rmarkdown::render_site()# build website
-
-
 -->
 # Syllabus
 
@@ -197,11 +195,11 @@ these conflicts with me at least two weeks prior to the scheduled date.
 
 ## Important Dates
 
-* Last day to drop a class without a grade – August 22
-* Last day to add a class – August 23
-* Last day to drop course with a "W" grade – October 5
-* Last day to withdraw from the university – November 11
-* Final exam – Wednesday December 7:  8am – 11am
+
+```{r,echo=FALSE}
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,sheetName="important-dates")
+pander::pander(lapply(1:nrow(dat),function(x) as.character(dat$val)[x]))
+```
 
 ## Students with Disabilities
 
@@ -216,7 +214,19 @@ MSU is committed to complying with Title IX, a federal law that prohibits discri
   
 ## Tentative Lecture and Lab Schedule
 
-MOVE TO ITS OWN THING.. CALENDER FA-ICON
+Laboratory time subject to change with instructor availability; 
+laboratory sessions may be used to make up for missed lectures due to 
+weather and instructor availability.
+
+```{r,echo=FALSE}
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,sheetName="2017-F",
+    stringsAsFactors=FALSE)
+dat<-dat[,c(1:4)]
+dat[is.na(dat)]<-""
+knitr::kable(dat,
+    col.names=c("Week","Monday (Class: 8-8:50)","Tuesday (Lab: 1-4:50)",
+    "Wednesday (Class: 8-8:50)"))
+```
 
 
 

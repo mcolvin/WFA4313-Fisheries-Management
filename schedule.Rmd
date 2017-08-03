@@ -6,6 +6,26 @@ output:
       after_body: _includes/include_footer-no-disqus.html
       in_header: _includes/header_banner.html 
 ---
+<!--
+library(knitr)
+rmarkdown::render_site("schedule.Rmd")# build website
+rmarkdown::render_site()# build website
+-->
 
-# Schedule
 
+# Provisional Lecture and Lab Schedule
+
+Laboratory time subject to change with instructor availability; 
+laboratory sessions may be used to make up for missed lectures due to 
+weather and instructor availability.
+
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,sheetName="2017-F",
+    stringsAsFactors=FALSE)
+dat<-dat[,c(1:4)]
+dat[is.na(dat)]<-""
+knitr::kable(dat,
+    col.names=c("Week","Monday (Class: 8-8:50)","Tuesday (Lab: 1-4:50)",
+    "Wednesday (Class: 8-8:50)"))
+```
