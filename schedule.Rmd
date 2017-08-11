@@ -1,5 +1,5 @@
 ---
-title: "WFA4313/6313 Fisheries Management"
+title: "Provisional Lecture and Lab Schedule"
 output: 
   html_document:
     includes:
@@ -12,8 +12,6 @@ rmarkdown::render_site("schedule.Rmd")# build website
 rmarkdown::render_site()# build website
 -->
 
-
-# Provisional Lecture and Lab Schedule
 
 Laboratory time subject to change with instructor availability; 
 laboratory sessions may be used to make up for missed lectures due to 

@@ -1,5 +1,5 @@
 ---
-title: "WFA4313/6313 Fisheries Management"
+title: "Course literature"
 output: 
   html_document:
     includes:
@@ -14,5 +14,5 @@ rmarkdown::render_site()# build website
 -->
 
 
-# Course literature
+
 asdfasdfasf

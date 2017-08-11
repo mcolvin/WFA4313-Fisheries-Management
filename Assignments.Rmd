@@ -1,21 +1,36 @@
 ---
-title: "WFA4313/6313 Fisheries Management"
+title: "Assignments"
 output: 
   html_document:
     includes:
-      after_body: _includes/include_footer-no-disqus.html
+      after_body: _includes/include_footer.html
       in_header: _includes/header_banner.html 
 ---
 <!--
 library(knitr)
 rmarkdown::render_site("assignments.Rmd")# build website
+rmarkdown::render_site()# build website
 -->
 
 
-# assignments
+Over the semester there will be 5 assignments worth 100 points of your 
+final grade. Recall you may hand in assignments late but with a 
+penalty.^[All assignments must be turned in on time. Late assignments may 
+be graded, but the maximum point value will be reduced by 5% for every 
+day the assignment is late; however, assignments will not be graded if 
+they are turned in after graded assignments are returned to the class. 
+If for some reason there is a timing conflict associated with an exam, 
+discuss these conflicts with me at least two weeks prior to the 
+scheduled date.]
 
-* lkdla;kfas;ldfj;
-    1. Provide 1 multiple choice question you believe is a good candidate for a final exam question
-    2. Provide 1 question, that is not multiple choice, you believe is a good candidate for a final exam
-    3. Provide 1 question or topic you would like to see reviewed prior to the final exam. (Optional)
-    4. For full credit your responses are due by 5pm 4/24/2016. 
+
+
+## Assignments
+1. Will be posted once assignment is assigned to students
+1. Will be posted once assignment is assigned to students
+1. Will be posted once assignment is assigned to students
+1. Will be posted once assignment is assigned to students
+1. Will be posted once assignment is assigned to students
+
+
+

@@ -1,5 +1,5 @@
 ---
-title: "WFA4313/6313 Fisheries Management"
+title: "Laboratories"
 output: 
   html_document:
     includes:
@@ -7,48 +7,41 @@ output:
       in_header: _includes/header_banner.html 
 ---
 <!--
-library(knitr)
 rmarkdown::render_site("labs.Rmd")# build website
 -->
 
-# WFA4133-Fisheries Science Laboratories
+## Stuff
 
-## Laboratories
 
-* Laboratory 9: 
-    * Laboratory hand out [here](Laboratory-09.html)
-    * Link to your group data [here](http://mec685.cfr.msstate.edu/WFA4133/)
-    
 
-* Laboratory 8: Yield per recruit analysis
-    * Laboratory hand out [here](Laboratory-08.html)
-    * Link to your group data [here](http://mec685.cfr.msstate.edu/WFA4133/)
-    
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
+    sheetName="lab-schedule",
+    stringsAsFactors=FALSE)
+dat$Date<-as.character(dat$Date)
+dat$L1<-paste("Laboratory"," ",dat$Laboratory,"(",dat$Date,"): ",
+    dat$L1,sep="")
+x<-list()
+for(i in na.omit(unique(dat$Laboratory)))
+    {
+    if(length(na.omit(dat[dat$Laboratory==i,]$L2))==0)
+        {
+        x[[i]]<- list(L1=dat[dat$Laboratory==i,]$L1[1])
+        }else
+        {
+        x[[i]]<- list(L1=dat[dat$Laboratory==i,]$L1[1],
+            L2=na.omit(dat[dat$Laboratory==i,]$L2))
+        }
+  
+    }
+```
 
-* Laboratory 7: Final project and growth and survival estimates
-    * Laboratory hand out [here](Laboratory-07.html)
-    * Catch curve tutorial [here](https://www.youtube.com/watch?v=TWzSeAs0Wzg&feature=youtu.be)
-    * Link to your group data [here](http://mec685.cfr.msstate.edu/WFA4133/)
-    
-* Laboratory 6: Age and growth estimation
-    * Laboratory hand out [here](Laboratory-06.html)
 
-* Laboratory 5
-    * Laboratory hand out [here](Laboratory-05.html)
-    * Enter team lab responses [here](https://goo.gl/forms/69VkGMxxtbzdLPwD2).
 
-* Laboratory 3
-    * Laboratory hand out [here](Laboratory-03.html)
-    * Where to enter lab responses [http://goo.gl/forms/jG9GTQZWCV](http://goo.gl/forms/jG9GTQZWCV)
-    * Group assignments [here](lab-groups.html)
+```{r,echo=FALSE,results='asis'}
+# level -1 drops indent so it does not 
+# format as code...
+pander::pandoc.list(x, indent.level = -1)
 
-* Laboratory 2
-    * Laboratory hand out [here](Laboratory-02.html)
-    * Where to enter lab responses [http://goo.gl/forms/PFdmKVUUXO](http://goo.gl/forms/PFdmKVUUXO)
-    * Group assignments [here](lab-groups.html)
-
-* Laboratory 1
-    * Laboratory hand out [here](Laboratory-01.html)
-    * Where to enter lab responses [http://goo.gl/forms/j92IDo7EMF](http://goo.gl/forms/j92IDo7EMF)
-
+```
 

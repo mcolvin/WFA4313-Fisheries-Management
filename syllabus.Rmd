@@ -1,5 +1,5 @@
 ---
-title: "WFA4313/6313 Fisheries Management"
+title: "Syllabus"
 output: 
   html_document:
     includes:
@@ -13,7 +13,7 @@ library(knitr)
 rmarkdown::render_site("syllabus.Rmd")# build website
 rmarkdown::render_site()# build website
 -->
-# Syllabus
+
 
 Instructor: Dr. Michael E. Colvin  
 Office: Thompson 215  
@@ -69,11 +69,16 @@ fisheries managers to manage fisheries
 By the end of the course, you will be able to:
 
 1. Define different fishery types, history and application
-1. Compare and evaluate common practices used to manage and conserve fishes, fisheries and their habitats
-1. Understand population dynamics and the effects of harvest and propagation
-1. Calculate dynamic rate functions (i.e., recruitment, growth, and mortality) and population dynamics of fish populations
-1. Interpret and evaluate stock assessment techniques and their application to management and conservation
-1. Explain common population indices, including their assumptions, benefits, and limitations
+1. Compare and evaluate common practices used to manage and conserve 
+fishes, fisheries and their habitats 
+1. Understand population dynamics and the effects of harvest and 
+propagation 
+1. Calculate dynamic rate functions (i.e., recruitment, growth, and 
+mortality) and population dynamics of fish populations 
+1. Interpret and evaluate stock assessment techniques and their 
+application to management and conservation 
+1. Explain common population indices, including their assumptions, 
+benefits, and limitations 
 1. Understand contemporary management of natural resources
 
 ## Academic misconduct
@@ -161,14 +166,15 @@ work.
 
 ### Summary of evaluations:
 
-Task						Points	
-Exam I			  			125
-Exam II		  			125
-Exam III (Final)				200
-Laboratory problem sets  			200
-Management brief 	  			250
-Class assignments and participation	   	100
-Total						1000			
+| Task                                	| Points 	|
+|-------------------------------------	|:------:	|
+| Exam I                              	|   125  	|
+| Exam II                             	|   125  	|
+| Exam III (Final)                    	|   200  	|
+| Laboratory problem sets             	|   200  	|
+| Management brief                    	|   250  	|
+| Class assignments and participation 	|   100  	|
+| Total                               	|  1000  	|			
 
 ### 6313 Students- Management model and description
 

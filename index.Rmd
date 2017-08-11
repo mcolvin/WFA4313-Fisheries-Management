@@ -15,15 +15,29 @@ rmarkdown::render_site()# build website
 
 # Course announcements
 
-* Welcome to class! 
-    * You can see the course schedule [here](schedule.html) and syllabus [here](syllabus.html). 
-    * We will not have class next week due to the Annual AFS meeting in Tampa.
 
-
+    
+    
+```{r,echo=FALSE,results="asis"}
+dat<-xlsx::read.xlsx("_includes/wfa4313.xlsx" ,sheetName="announcements",
+    stringsAsFactors=FALSE)
+    
+x<-list()
+for(i in  unique(dat$id))
+    {
+    pp<-list(
+        L1=as.character(na.omit(dat[dat$id==i,]$L1)),
+        L2=dat[dat$id==i,]$L2)
+    x<-c(x,pp)
+    }
+pander::pandoc.list(x)
+```
 
 <!--
 NPR: To Help Keep Sturgeon Sustainable, Farm And Fishery Work Together. http://google.com/newsstand/s/CBIw7tWXzjI
 
+
+Dick Grachek: Maximum Sustainable Yield: Just More Management Delusion or a Bureaucratic Con? http://fisherynation.com/archives/61864
 
 * Final Exam is scheduled for Wednesday, May 03, 2017 8-11 am!!!!
 
