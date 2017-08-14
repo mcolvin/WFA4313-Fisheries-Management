@@ -45,3 +45,22 @@ pander::pandoc.list(x, indent.level = -1)
 
 ```
 
+```{r,echo=FALSE,results='asis'}
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
+    sheetName="lab-schedule",
+    stringsAsFactors=FALSE)
+dat$Date<-as.character(dat$Date)
+dat$L1<-paste("Laboratory"," ",dat$Laboratory,"(",dat$Date,"): ",
+    dat$L1,sep="")
+x<-list()
+
+h1<-unique(dat$L1[which(!is.na(dat$Date))])
+for(i in  1:max(na.omit(dat$Laboratory)))
+    {
+    sub<- subset(dat,Laboratory==i)
+    cat(paste0("### ", h1[i],sep=""))
+    pander::pandoc.list(as.list(sub$L2))
+    } 
+```
+
+

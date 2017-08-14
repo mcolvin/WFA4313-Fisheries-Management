@@ -15,4 +15,16 @@ rmarkdown::render_site()# build website
 
 
 
-asdfasdfasf
+
+```{r,echo=FALSE,results='asis'}
+dat<-xlsx::read.xlsx("_includes/wfa4313.xlsx" ,
+    sheetName="literature",
+    stringsAsFactors=FALSE)
+topics<-sort(unique(dat$L1))
+for(i in  1:length(topics))
+    {
+    sub<- subset(dat,L1==topics[i])
+    cat(paste0("### ", topics[i],sep=""))
+    pander::pandoc.list(as.list(sub$L2))
+    }    
+```
