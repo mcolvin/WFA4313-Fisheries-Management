@@ -1,0 +1,132 @@
+
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> rmarkdown::render_site()# build website
+  |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS assignments.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output assignments.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str3310358f6f19.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str33103ec65d86.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS classes.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output classes.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str3310749147be.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str331047513212.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS Final-Project.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output Final-Project.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str33103e147715.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str331060032855.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |......................                                           |  33%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ echo   : logi FALSE
+ $ results: chr "asis"
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS index.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output index.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str331052544471.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str331063571f91.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer-no-disqus.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |.........                                                        |  14%
+  ordinary text without R code
+
+  |                                                                         |...................                                              |  29%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+  |                                                                         |............................                                     |  43%
+  ordinary text without R code
+
+  |                                                                         |.....................................                            |  57%
+label: unnamed-chunk-2 (with options) 
+List of 2
+ $ echo   : logi FALSE
+ $ results: chr "asis"
+
+  |                                                                         |..............................................                   |  71%
+  ordinary text without R code
+
+  |                                                                         |........................................................         |  86%
+label: unnamed-chunk-3 (with options) 
+List of 2
+ $ echo   : logi FALSE
+ $ results: chr "asis"
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS labs.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output labs.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str331031835f6.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str33101ff6c11.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-1 (with options) 
+List of 2
+ $ echo   : logi FALSE
+ $ results: chr "asis"
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS literature.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output literature.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str33104d436b59.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str33102f2e4e13.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer-no-disqus.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |................................                                 |  50%
+  ordinary text without R code
+
+  |                                                                         |.................................................................| 100%
+label: unnamed-chunk-1 (with options) 
+List of 3
+ $ echo   : logi FALSE
+ $ message: logi FALSE
+ $ warning: logi FALSE
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS schedule.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output schedule.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str3310462b33ca.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str3310366d25ad.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer-no-disqus.html" 
+  |                                                                         |                                                                 |   0%  |                                                                         |.............                                                    |  20%
+  ordinary text without R code
+
+  |                                                                         |..........................                                       |  40%
+label: unnamed-chunk-1 (with options) 
+List of 1
+ $ echo: logi FALSE
+
+  |                                                                         |.......................................                          |  60%
+  ordinary text without R code
+
+  |                                                                         |....................................................             |  80%
+label: unnamed-chunk-2 (with options) 
+List of 1
+ $ echo: logi FALSE
+
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+"C:/PROGRA~2/Pandoc/pandoc" +RTS -K512m -RTS syllabus.utf8.md --to html --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output syllabus.html --smart --email-obfuscation none --standalone --section-divs --template "C:\PROGRA~1\R\R-33~1.1\library\RMARKD~1\rmd\h\DEFAUL~1.HTM" --no-highlight --variable highlightjs=1 --include-before-body "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str33101afa67c7.html" --variable navbar=1 --variable body_padding=51 --variable header_padding=56 --variable "theme:cosmo" --include-in-header "C:\Users\mcolvin\AppData\Local\Temp\RtmpeuDoxM\rmarkdown-str331030076f8c.html" --mathjax --variable "mathjax-url:https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" --include-in-header "_includes\header_banner.html" --include-after-body "_includes\include_footer-no-disqus.html" 
+
+Output created: docs/index.html
+> 
+> proc.time()
+   user  system elapsed 
+   5.16    1.91   48.61 
