@@ -15,36 +15,6 @@ weather and instructor availability.*
 
 
 
-```{r,echo=FALSE,message=FALSE,warning=FALSE}
-dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
-    sheetName="lab-schedule",
-    stringsAsFactors=FALSE)
-dat$Date<-as.character(dat$Date)
-dat$L1<-paste("Laboratory"," ",dat$Laboratory,"(",dat$Date,"): ",
-    dat$L1,sep="")
-x<-list()
-for(i in na.omit(unique(dat$Laboratory)))
-    {
-    if(length(na.omit(dat[dat$Laboratory==i,]$L2))==0)
-        {
-        x[[i]]<- list(L1=dat[dat$Laboratory==i,]$L1[1])
-        }else
-        {
-        x[[i]]<- list(L1=dat[dat$Laboratory==i,]$L1[1],
-            L2=na.omit(dat[dat$Laboratory==i,]$L2))
-        }
-  
-    }
-```
-
-
-
-```{r,echo=FALSE,results='asis'}
-# level -1 drops indent so it does not 
-# format as code...
-pander::pandoc.list(x, indent.level = -1)
-
-```
 
 ```{r,echo=FALSE,results='asis'}
 dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
@@ -63,5 +33,3 @@ for(i in  1:max(na.omit(dat$Laboratory)))
     pander::pandoc.list(as.list(sub$L2))
     } 
 ```
-
-

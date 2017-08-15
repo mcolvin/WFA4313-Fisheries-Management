@@ -209,11 +209,27 @@ pander::pander(lapply(1:nrow(dat),function(x) as.character(dat$val)[x]))
 
 ## Students with Disabilities
 
-Accommodations are collaborative efforts between students, faculty and Disability Support Services (DSS). Students with accommodations approved through DSS are responsible for contacting the faculty member in charge of the course prior to or during the first week of the term to discuss accommodations. Students who believe they are eligible for accommodations but who have not yet obtained approval through DSS should contact DSS immediately at (662) 325-3335.
+Accommodations are collaborative efforts between students, faculty and 
+Disability Support Services (DSS). Students with accommodations approved 
+through DSS are responsible for contacting the faculty member in charge 
+of the course prior to or during the first week of the term to discuss 
+accommodations. Students who believe they are eligible for 
+accommodations but who have not yet obtained approval through DSS should 
+contact DSS immediately at (662) 325-3335. 
+
 
 ## Title IX
 
-MSU is committed to complying with Title IX, a federal law that prohibits discrimination, including violence and harassment, based on sex. This means that MSU' s educational programs and activities must be free from sex discrimination, sexual harassment, and other forms of sexual misconduct. If you or someone you know has experienced sex discrimination, sexual violence and/or harassment by any member of the University community, you are encouraged to report the conduct to MSU' s Director of Title IX/EEO Programs at 325-8124 or by e-mail to titleix@msstate.edu. Additional resources are available at:
+MSU is committed to complying with Title IX, a federal law that 
+prohibits discrimination, including violence and harassment, based on 
+sex. This means that MSU' s educational programs and activities must be 
+free from sex discrimination, sexual harassment, and other forms of 
+sexual misconduct. If you or someone you know has experienced sex 
+discrimination, sexual violence and/or harassment by any member of the 
+University community, you are encouraged to report the conduct to MSU' s 
+Director of Title IX/EEO Programs at 325-8124 or by e-mail to 
+titleix@msstate.edu. Additional resources are available at: 
+
 * http://www.msstate.edu/web/security/title9-12.pdf, or 
 * http://students.msstate.edu/sexualmisconduct/
 

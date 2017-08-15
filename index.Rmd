@@ -19,7 +19,7 @@ rmarkdown::render_site()# build website
     
     
 ```{r,echo=FALSE,results="asis"}
-dat<-xlsx::read.xlsx("_includes/wfa4313.xlsx",
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx",
     sheetName="announcements",
     stringsAsFactors=FALSE)
     

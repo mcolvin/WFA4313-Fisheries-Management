@@ -6,15 +6,53 @@ output:
       after_body: _includes/include_footer.html
       in_header: _includes/header_banner.html 
 ---
+
+<!--
+rmarkdown::render_site("classes.Rmd")# build website
+
+-->
+
+This is where you can find class decks, links to assignments, and so on!
+
+
+
+```{r,echo=FALSE,results='asis'}
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
+    sheetName="class-content",
+    stringsAsFactors=FALSE)
+dat<-subset(dat,process==1)
+dat$Date<-as.character(dat$Date)
+dat$H1<-ifelse(!(is.na(dat$H1)),paste("Class"," ",dat$Class,"(",dat$Date,"): ",
+    dat$H1,sep=""),NA)
+h1<-c(na.omit(unique(dat$H1)))
+for(i in  1:max(na.omit(dat$Class)))
+    {
+    sub<- subset(dat,Class==i)
+    indx1<- which(!is.na(sub$L1))
+    indx2<-indx1+diff(c(indx1,length(sub$L2)+1))-1
+    LL<-list()
+    for(x in 1:length(indx))
+        {
+        L1=sub$L1[indx1[x]]
+        L2= na.omit(sub$L2[indx1[x]:indx2[x]])
+        if(length(L2)>0){LL[[x]]<- list(L1=L1,L2=L2)}
+        if(length(L2)==0){LL[[x]]<- list(L1=L1)}
+        }
+    cat(paste0("### ", h1[i],sep=""))
+    cat("\n")
+    pander::pandoc.list(LL,indent=-1,add.line.breaks =FALSE)
+    } 
+```
+
 <!--
 library(knitr)
 rmarkdown::render_site("classes.Rmd")# build website
 
 Smithsonian.com: This Obscure Fishing Book is One of the Most Reprinted English Books Ever. http://google.com/newsstand/s/CBIwyYi18Tk
--->
 
 
-1. History of fisheries management 
+
+
 1. Fisheries management overview
     1. Public trust resource
     2. North American conservation model
@@ -34,3 +72,4 @@ Smithsonian.com: This Obscure Fishing Book is One of the Most Reprinted English 
 4. Population dynamics
 5. Management objectives
     1. HW-creating objectives
+-->

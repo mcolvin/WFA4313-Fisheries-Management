@@ -13,11 +13,12 @@ rmarkdown::render_site("literature.Rmd")# build website
 rmarkdown::render_site()# build website
 -->
 
-
+The list below contains some useful references and suggested readings
+for class assignments and background.
 
 
 ```{r,echo=FALSE,results='asis'}
-dat<-xlsx::read.xlsx("_includes/wfa4313.xlsx" ,
+dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
     sheetName="literature",
     stringsAsFactors=FALSE)
 topics<-sort(unique(dat$L1))
