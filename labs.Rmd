@@ -10,7 +10,8 @@ output:
 rmarkdown::render_site("labs.Rmd")# build website
 -->
 
-## Stuff
+*The schedule below is provisional and subject to change depending on 
+weather and instructor availability.*
 
 
 
