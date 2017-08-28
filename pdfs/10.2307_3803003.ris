@@ -1,0 +1,25 @@
+Provider: JSTOR http://www.jstor.org
+Database: JSTOR
+Content: text/plain; charset="us-ascii"
+
+
+TY  - JOUR
+TI  - Simultaneous Use of Mark-Recapture and Radiotelemetry to Estimate Survival, Movement, and Capture Rates
+AU  - Powell, Larkin A.
+AU  - Conroy, Michael J.
+AU  - Hines, James E.
+AU  - Nichols, James D.
+AU  - Krementz, David G.
+AB  - Biologists often estimate separate survival and movement rates from radiotelemetry and mark-recapture data from the same study population. We describe a method for combining these data types in a single model to obtain joint, potentially less biased estimates of survival and movement that use all available data. We furnish an example using wood thrushes (Hylocichla mustelina) captured at the Piedmont National Wildlife Refuge in central Georgia in 1996. The model structure allows estimation of survival and capture probabilities, as well as estimation of movements away from and into the study area. In addition, the model structure provides many possibilities for hypothesis testing. Using the combined model structure, we estimated that weekly survival of wood thrushes was 0.989 &#xb1; 0.007 (&#xb1;SE). Survival rates of banded and radiomarked individuals were not different ($\hat{\alpha}[S_{radioed},S_{banded}]=\text{log}[\hat{S}_{radioed}/\hat{S}_{banded}]$ = 0.0239, 95% CI = -0.0196 to 0.0486). Fidelity rates (weekly probability of remaining in a stratum) did not differ between geographic strata ($\hat{\Psi}=0.911\pm 0.020$; $\hat{\alpha}[\Psi ^{11},\Psi ^{22}]$ = 0.0161, 95% CI = -0.0309 to 0.0631), and recapture rates (p = 0.097 &#xb1; 0.016) of banded and radiomarked individuals were not different ($\hat{\alpha}[p_{radioed},p_{banded}]$ = 0.145, 95% CI = -0.510 to 0.800). Combining these data types in a common model resulted in more precise estimates of movement and recapture rates than separate estimation, but ability to detect stratum or mark-specific differences in parameters was weak. We conducted simulation trials to investigate the effects of varying study designs on parameter accuracy and statistical power to detect important differences. Parameter accuracy was high (relative bias [RBIAS] <2%) and confidence interval coverage close to nominal, except for survival estimates of banded birds for the "off study area" stratum, which were negatively biased (RBIAS -7 to -15%) when sample sizes were small (5-10 banded or radioed animals "released" per time interval). To provide adequate data for useful inference from this model, study designs should seek a minimum of 25 animals of each marking type observed (marked or observed via telemetry) in each time period and geographic stratum.
+C1  - Full publication date: Jan., 2000
+DO  - 10.2307/3803003
+EP  - 313
+IS  - 1
+PB  - [Wiley, Wildlife Society]
+PY  - 2000
+SN  - 0022541X, 19372817
+SP  - 302
+T2  - The Journal of Wildlife Management
+UR  - http://www.jstor.org/stable/3803003
+VL  - 64
+ER  - 

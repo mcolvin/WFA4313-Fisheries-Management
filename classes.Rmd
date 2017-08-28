@@ -27,21 +27,33 @@ dat$H1<-ifelse(!(is.na(dat$H1)),paste("Class"," ",dat$Class,"(",dat$Date,"): ",
 h1<-c(na.omit(unique(dat$H1)))
 for(i in  1:max(na.omit(dat$Class)))
     {
-    sub<- subset(dat,Class==i)
-    indx1<- which(!is.na(sub$L1))
-    indx2<-indx1+diff(c(indx1,length(sub$L2)+1))-1
-    LL<-list()
-    for(x in 1:length(indx))
-        {
-        L1=sub$L1[indx1[x]]
-        L2= na.omit(sub$L2[indx1[x]:indx2[x]])
-        if(length(L2)>0){LL[[x]]<- list(L1=L1,L2=L2)}
-        if(length(L2)==0){LL[[x]]<- list(L1=L1)}
-        }
-    cat(paste0("### ", h1[i],sep=""))
+    sub<- subset(dat,Class==i) 
+    cat(paste0("### ", h1[i],"  ",sep=""))
     cat("\n")
-    pander::pandoc.list(LL,indent=-1,add.line.breaks =FALSE)
-    } 
+    cat("\n")
+    
+    
+    if(length(na.omit(sub$L1))>0)
+        {
+        indx1<- which(!is.na(sub$L1));    
+        cat("\n")
+        indx2<-indx1+diff(c(indx1,length(sub$L2)+1))-1
+        LL<-list()
+        for(x in 1:length(indx1))
+            {
+            L1=sub$L1[indx1[x]]
+            L2= na.omit(sub$L2[indx1[x]:indx2[x]])
+            if(length(L2)>0){LL[[x]]<- list(L1=L1,L2=L2)}
+            if(length(L2)==0){LL[[x]]<- list(L1=L1)}
+            }
+        pander::pandoc.list(LL,indent=-1,add.line.breaks =FALSE)
+        } 
+    }
+
+ 
+    
+    
+    
 ```
 
 <!--

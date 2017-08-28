@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>WFA4313/6313 Lab 1: Public trust and population dynamics</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<div><img src="images/20170321_180723.jpg" width="100%" align="right"></div>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">WFA4313/6313</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="classes.html">
+    <span class="fa fa-files-o"></span>
+     
+    Classes
+  </a>
+</li>
+<li>
+  <a href="labs.html">
+    <span class="fa fa-line-chart"></span>
+     
+    Labs
+  </a>
+</li>
+<li>
+  <a href="Assignments.html">
+    <span class="fa fa-pencil-square-o"></span>
+     
+    Assignments
+  </a>
+</li>
+<li>
+  <a href="schedule.html">
+    <span class="fa fa-calendar"></span>
+     
+    Schedule
+  </a>
+</li>
+<li>
+  <a href="literature.html">
+    <span class="fa fa-book"></span>
+     
+    Literature
+  </a>
+</li>
+<li>
+  <a href="syllabus.html">
+    <span class="fa fa-file-text"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li>
+  <a href="mailto:michael.colvin@msstate.edu?Subject=WFA4313">
+    <span class="fa fa-envelope-o"></span>
+     
+    Email
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">WFA4313/6313 Lab 1: Public trust and population dynamics</h1>
+
+</div>
+
+
+<!--
+library(knitr)
+rmarkdown::render_site("Lab-01.Rmd")# build website
+-->
+<p>NAME:</p>
+<div id="lab-overview" class="section level2">
+<h2>LAB OVERVIEW</h2>
+<p>This laboratory consists of 4 exercises. Questions and problem sets are located at the end of each laboratory section. Note the numbering of the questions reflecting the laboratory exercise and the question number (e.g., 1.2, 1.2). Use this numbering when answering the questions and turning in laboratory. Responses to questions will be due by 5pm September 6th. Responses are to be entered at <a href="https://goo.gl/forms/7fCnlGxMnSy4VXed2" class="uri">https://goo.gl/forms/7fCnlGxMnSy4VXed2</a>. This lab is worth 25 points.</p>
+</div>
+<div id="laboratory-exercise-1-public-trust-resource-and-tragedy-of-the-commons" class="section level2">
+<h2>LABORATORY EXERCISE 1: PUBLIC TRUST RESOURCE AND TRAGEDY OF THE COMMONS</h2>
+<p>This exercise will require 4 class volunteers to ‘fish’ the population. We will fill in the table below as a class. Note the recruitment rate is 1 for gold and 3 for silver</p>
+<table style="border-collapse:collapse;border-spacing:0">
+<tr>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background-color:#000000;vertical-align:top">
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Gold ($300)
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Silver ($100)
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Profit
+</th>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-style:italic;text-align:center;vertical-align:top" colspan="4">
+Round 1 (30 Seconds)
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+1.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+3.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+4.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;background-color:#000000;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Gold ($300)
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Silver ($100)
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Profit
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;font-style:italic;text-align:center;vertical-align:top" colspan="4">
+Round 2 (30 Seconds)
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+1.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+3.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+4.
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+</table>
+<div id="questions-2-points" class="section level3">
+<h3>Questions (2 points)</h3>
+<p>1.1. Did any of the fish species go extinct? If so which ones? (1 Point) <br> <br> <br> <br> <br> 1.2. How could you have managed the catch to prevent the fish from becoming extinct? (1 Point; Note: There is no right or wrong answer, just propose and idea and defend why it may work) <br> <br> <br> <br> <br></p>
+</div>
+</div>
+<div id="laboratory-exercise-2-population-dynamics-in-lake-bulldog" class="section level2">
+<h2>LABORATORY EXERCISE 2: POPULATION DYNAMICS IN LAKE BULLDOG</h2>
+<p>Lake Bulldog is a 10 acre lentic system located in Mississippi. The population dynamics of Largemouth Bass <em>Micropterus salmoides</em> in the system is characterized by the number of births and immigrants, less the number of deaths and emigrants, a model known as the BIDE model. This model formally calculates the change in a population over time as:</p>
+<p><span class="math display">\[\frac{dA}{dt}=B+I-(D+E)\]</span></p>
+<p>This equation is not too scary, it simply states:</p>
+<p><span class="math display">\[\frac{The\,change\,in\,abundance}{The\,change\,in\,time}=Births+Immigra 
+nts-(Deaths+Emmigrants)\]</span></p>
+<p>and conceptually it looks like this:</p>
+<p><img src="images/BIDE-Figure.png" width="95%" /></p>
+<p>Figure 1.—Conceptual representation of the BIDE model. The population gains represents additions to the population and the population losses are flows out of the population. The arrows pointing into and out of the box are called ‘flows’. This is what is commonly referred to as a stock and flow or a box and flow diagram.</p>
+<p>In most applications the change in time is 1 year (i.e., dt = 1), which makes it easy to forecast population dynamics over time. Let’s expand the equation above to do this (notice that is equal to 1)</p>
+<p><span class="math inline">\(\frac{dA}{dt}=B+I-(D+E)\)</span></p>
+<p><span class="math inline">\(\frac{{{A}_{t+dt}}-{{A}_{t}}}{dt}=B+I-(D+E)\)</span></p>
+<p><span class="math inline">\(\frac{{{A}_{t+1}}-{{A}_{t}}}{1}=B+I-(D+E)\)</span></p>
+<p><span class="math inline">\({{A}_{t+1}}-{{A}_{t}}=B+I-(D+E)\)</span></p>
+<p><span class="math inline">\({{A}_{t+1}}={{A}_{t}}+B+I-(D+E)\)</span></p>
+<p><span class="math inline">\({{A}_{t+1}}={{A}_{t}}+\frac{dA}{dt}\)</span></p>
+<p>OK I have hopefully proved my point, let’s move on to the fun stuff. Suppose, the birth, immigration, death, and emigration rates for Lake Bulldog are:</p>
+<p><span class="math display">\[\begin{align}
+  &amp; \text{Birth (fish per year;}\,B)=4 \\ 
+ &amp; \text{Immigration (fish per year;}\,I)=0 \\ 
+ &amp; \text{Death (fish per year;}\,D)=3 \\ 
+ &amp; \text{Emigration (fish per year;}\,E)=0 \\ 
+\end{align}\]</span></p>
+<p>Using the figure for Lake Bulldog (laminated sheet 1):</p>
+<p>1.Add 5 goldfish to the outline of Lake Bulldog. This represents the initial population abundance in 2015, see Table 1. 2.Add 4 Goldfish representing births and remove 3 goldfish representing deaths from the lake and count how many gold fish remain in the Lake Bulldog. The difference of births and deaths is <span class="math inline">\(\frac{dA}{dt}\)</span> (Equation 3). Record this number for <span class="math inline">\(\frac{dA}{dt}\)</span> in year 2015. 3.Record this number as the abundances (A) in year 2016. This should equal equation 8 if you simply add them up in Table 1. 4.Add 4 Goldfish representing births and remove 3 goldfish representing deaths from the lake and. The difference of births and deaths is <span class="math inline">\(\frac{dA}{dt}\)</span>. Record this number for <span class="math inline">\(\frac{dA}{dt}\)</span> in year 2016. 5.Count how many gold fish remain in the Lake Bulldog Record this number as the abundances (A) in year 2017. 6. Repeat steps 4 and 5 until Table 1 is filled.</p>
+<p>Table 1. Forecasted population dynamics of Largemouth Bass in Lake Bulldog.</p>
+<table style="border-collapse:collapse;border-spacing:0">
+<tr>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Year (t)
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+<span class="math inline">\(dA/dt\)</span>
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+A
+</th>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2015
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+5
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2016
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2017
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+7
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2018
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2019
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2020
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2021
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+11
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2022
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2023
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2024
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2025
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+</table>
+<ol start="7" style="list-style-type: decimal">
+<li>Using the data in Table 1 plot the population abundance (A; y-axis) versus Year (t; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-2-1.png" width="288" style="display: block; margin: auto;" /></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Using the data in Table 1 plot the change in abundance over time ( ; y-axis) versus abundance (A; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-3-1.png" width="624" /></p>
+<div id="questions-9-points" class="section level3">
+<h3>Questions (9 points)</h3>
+<p>2.1. Given the parameters used to calculate and A report the following values (3 points): A) What will be in year 2028?<br />
+B) What will A be in year 2027? C) Suppose the birth rate was 3 and the death rate was 4 (immigration and emigration are 0) and the initial population was 8 in 2015. How many fish will there be in 2018? <br> <br> <br> <br> <br> 2.2. The model of population dynamics in Lake Bulldog assumes 3 fish/year are added per year. Does this seem biologically realistic to you? Why or why not? (3 points) <br> <br> <br> <br> <br> 2.3. What does setting Immigration and Emigration to 0 assume? (3 points) <br> <br> <br> <br> <br></p>
+</div>
+</div>
+<div id="laboratory-exercise-3-population-dynamics-in-bulldog-creek" class="section level2">
+<h2>LABORATORY EXERCISE 3: POPULATION DYNAMICS IN BULLDOG CREEK</h2>
+<p>Bulldog Creek is a first order tributary (i.e., headwater stream)[^https://en.wikipedia.org/wiki/Strahler_number] to Lake Bulldog and is occupied by Largemouth Bass. There is a 5 m scenic waterfall located at river kilometer (RKM) 0.5. The birth rate is similar to Lake Bulldog but the death and emigration rates differ.</p>
+<p><span class="math display">\[\begin{align}
+  &amp; \text{Birth:}\,B=3 \\ 
+ &amp; \text{Immigration:}\,I=0 \\ 
+ &amp; \text{Death:}\,D=2 \\ 
+ &amp; \text{Emigration:}\,E=1 \\ 
+\end{align}\]</span></p>
+<p>Using the figure for Bulldog Creek (laminated sheet 2):</p>
+<ol style="list-style-type: decimal">
+<li>Add 10 goldfish to the outline of Bulldog Creek. This represents the initial population abundance in 2015, see Table 1.</li>
+<li>Add 3 Goldfish representing births and remove 2 goldfish representing deaths and 1 goldfish representing emigration from the system. Births less deaths and emigration is (Equation 3). Record this number for in year 2015 in Table 2.</li>
+<li>Count how many gold fish remain in the Bulldog Creek and record this number as the abundance (A) in year 2016 in Table 2. This should equal equation 8 if you simply add them up in Table 2.</li>
+<li>Repeat steps 2 and 3 for the remaining years until Table 2 is filled.</li>
+</ol>
+<p>Table 2. Forecasted population dynamics of Largemouth Bass in Bulldog Creek.</p>
+<table style="border-collapse:collapse;border-spacing:0">
+<tr>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+Year (t)
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+<span class="math inline">\(dA/dt*\)</span>
+</th>
+<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+A
+</th>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2015
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+10
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2016
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2017
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2018
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2019
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2020
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2021
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2022
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2023
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2024
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+<tr>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+2025
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
+</td>
+</tr>
+</table>
+<ul>
+<li>Because we are working on an annual time step dt = 1.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Using the data in Table 2 plot the population abundance (<span class="math inline">\(A\)</span>; y-axis) versus Year (t; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-4-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Using the data in Table 2 plot the change in abundance over time ( ; y-axis) versus abundance (A; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="questions-9-points-1" class="section level3">
+<h3>Questions (9 points)</h3>
+<p>3.1. The BIDE model allows for emigration from the system, but the immigration rate is 0. Is this biologically reasonable to you given this system? Why or why not? (3 points) <br> <br> <br> <br> <br> 3.2. In the Bulldog Creek example, what was the difference between births and deaths? Was the number positive, negative, or 0? Based on whether the number is positive, negative or 0, what should the population do if the initial abundance was 20 (hint: look at Figure 2). (3 points) <br> <br> <br> <br> <br> 3.3. How does the plot of abundance for Bulldog Creek compare to the same plot for Lake Bulldog? How does the difference between births and deaths for Lake Bulldog compare to Bulldog Creek? (3 points) <br> <br> <br> <br> <br></p>
+</div>
+</div>
+<div id="laboratory-exercise-4-exonential-population-dynamics" class="section level2">
+<h2>LABORATORY EXERCISE 4: EXONENTIAL POPULATION DYNAMICS</h2>
+<div id="exponential-model" class="section level3">
+<h3>Exponential model</h3>
+<p>The exponential model adds biological realism to the generic BIDE model. This is done by making population growth dependent on population abundance. Follow the exercise below for a better understanding of exponential population dynamics.</p>
+<ol style="list-style-type: decimal">
+<li>Put 5 goldfish on the rectangle representing the stock (Exponential dynamics, laminated sheet 4).</li>
+<li>Multiply the number of goldfish in the box by the intrinsic growth rate (<span class="math inline">\(r\)</span>) which is 0.25 for this demonstration (i.e., ) to calculate the population gains for 2015. Record this number for year 2015 in Table 3.</li>
+<li>Round that number to the nearest whole number and add that many goldfish to the stock box (i.e., ). Count how many goldfish there are in the box and Record this number for A in 2016 in Table 3.</li>
+<li>Repeat steps 2 and 3 until Table 3 is completed.</li>
+</ol>
+<p>Table 3. Forecasted population dynamics of Largemouth Bass in Lake Bulldog.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Year (t)</th>
+<th>Population gains</th>
+<th><span class="math inline">\(dA/dt\)</span></th>
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2015</td>
+<td></td>
+<td></td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>2016</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2017</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="5" style="list-style-type: decimal">
+<li>Using the data in Table 2 plot the population abundance (<span class="math inline">\(A\)</span>; y-axis) versus Year (<span class="math inline">\(t\)</span>; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-6-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Using the data in Table 3 plot the change in abundance over time (<span class="math inline">\(dA/dt\)</span>; y-axis) versus abundance (<span class="math inline">\(A\)</span>; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="exponential-model-with-harvest" class="section level3">
+<h3>Exponential model with harvest</h3>
+<p>Now that we have an increased understanding in population dynamics, we can add harvest to the population, this will be key for harvesting fish, or any other critter for that matter. Let’s build on the previous exponential population by adding harvest to the equation. This can be formally expressed as:</p>
+<p><span class="math display">\[\frac{dA}{dt}=r\cdot A-F\cdot A\]</span></p>
+<p>Like before let’s reinforce this with our goldfish on a stock and flow diagram.</p>
+<ol style="list-style-type: decimal">
+<li>Put 5 goldfish on the rectangle representing the stock (Exponential dynamics, laminated sheet 4).</li>
+<li>Multiply the number of goldfish in the box by the intrinsic growth rate (<span class="math inline">\(r\)</span> = 0.75) to get the population gains and record this number for 2015 in Table 4, including up to 2 decimal places.</li>
+<li>Multiply the number of goldfish in the box by the fishing mortality rate (<span class="math inline">\(F\)</span>= 0.55) to get the population losses and record this number for 2015 in Table 4, including up to 2 decimal places.</li>
+<li>Calculate the population change over the year for 2015 as population gains-population losses (i.e., <span class="math inline">\(\frac{dA}{dt}=r\cdot A-F\cdot A\)</span>). Round that number to the nearest whole number and record this number for year 2015 in Table 4.</li>
+<li>Add that many goldfish to the stock box. Count how many goldfish there are in the box and Record this number for A in 2016 in Table 3.</li>
+<li>Repeat steps 2 and 5 until Table 3 is completed.</li>
+</ol>
+<p>Table 4. Forecasted population dynamics of Largemouth Bass in Lake Bulldog.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Year (t)</th>
+<th>Population gains</th>
+<th>Population losses</th>
+<th><span class="math inline">\(dA/dt\)</span></th>
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2015</td>
+<td></td>
+<td></td>
+<td></td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>2016</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2017</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2025</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="7" style="list-style-type: decimal">
+<li>Using the data in Table 4 plot abundance over time (<span class="math inline">\(A\)</span>; y-axis) versus Year (t; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-8-1.png" width="672" /></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Using the data in Table 4 plot the change in abundance over time (<span class="math inline">\(dA/dt\)</span>; y-axis) versus abundance (<span class="math inline">\(A\)</span>; x-axis).</li>
+</ol>
+<p><img src="images/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="questions-5-points" class="section level3">
+<h3>Questions (5 points)</h3>
+<p>4.1. How does the plot of versus A for both exponential models differ for the BIDE models? (2 points) <br> <br> <br> <br> <br> 4.2. Given the population dynamics and rates for the exponential model with harvest, what would you set harvest to? Why? (2 points; there is really no right or wrong answer here I am curious about your process) <br> <br> <br> <br> <br> 4.3. Can you think of any way to improve this model? (1 point) <br> <br> <br> <br> <br></p>
+</div>
+</div>
+
+ </div> <!-- articleBandContent -->
+</div> <!-- pageContent -->
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
