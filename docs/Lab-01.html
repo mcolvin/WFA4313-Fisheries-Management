@@ -394,148 +394,92 @@ Round 2 (30 Seconds)
 <p><span class="math display">\[\frac{The\,change\,in\,abundance}{The\,change\,in\,time}=Births+Immigra 
 nts-(Deaths+Emmigrants)\]</span></p>
 <p>and conceptually it looks like this:</p>
-<p><img src="images/BIDE-Figure.png" width="95%" /></p>
+<p><img src="images/BIDE.png" width="95%" /></p>
 <p>Figure 1.—Conceptual representation of the BIDE model. The population gains represents additions to the population and the population losses are flows out of the population. The arrows pointing into and out of the box are called ‘flows’. This is what is commonly referred to as a stock and flow or a box and flow diagram.</p>
 <p>In most applications the change in time is 1 year (i.e., dt = 1), which makes it easy to forecast population dynamics over time. Let’s expand the equation above to do this (notice that is equal to 1)</p>
-<p><span class="math inline">\(\frac{dA}{dt}=B+I-(D+E)\)</span></p>
-<p><span class="math inline">\(\frac{{{A}_{t+dt}}-{{A}_{t}}}{dt}=B+I-(D+E)\)</span></p>
-<p><span class="math inline">\(\frac{{{A}_{t+1}}-{{A}_{t}}}{1}=B+I-(D+E)\)</span></p>
-<p><span class="math inline">\({{A}_{t+1}}-{{A}_{t}}=B+I-(D+E)\)</span></p>
-<p><span class="math inline">\({{A}_{t+1}}={{A}_{t}}+B+I-(D+E)\)</span></p>
-<p><span class="math inline">\({{A}_{t+1}}={{A}_{t}}+\frac{dA}{dt}\)</span></p>
+<p><span class="math display">\[\frac{dA}{dt}=B+I-(D+E)\]</span></p>
+<p><span class="math display">\[\frac{{{A}_{t+dt}}-{{A}_{t}}}{dt}=B+I-(D+E)\]</span></p>
+<p><span class="math display">\[\frac{{{A}_{t+1}}-{{A}_{t}}}{1}=B+I-(D+E)\]</span></p>
+<p><span class="math display">\[{{A}_{t+1}}-{{A}_{t}}=B+I-(D+E)\]</span></p>
+<p><span class="math display">\[{{A}_{t+1}}={{A}_{t}}+B+I-(D+E)\]</span></p>
+<p><span class="math display">\[{{A}_{t+1}}={{A}_{t}}+\frac{dA}{dt}\]</span></p>
 <p>OK I have hopefully proved my point, let’s move on to the fun stuff. Suppose, the birth, immigration, death, and emigration rates for Lake Bulldog are:</p>
-<p><span class="math display">\[\begin{align}
-  &amp; \text{Birth (fish per year;}\,B)=4 \\ 
- &amp; \text{Immigration (fish per year;}\,I)=0 \\ 
- &amp; \text{Death (fish per year;}\,D)=3 \\ 
- &amp; \text{Emigration (fish per year;}\,E)=0 \\ 
-\end{align}\]</span></p>
+<ul>
+<li>Birth (fish per year;<span class="math inline">\(B\)</span>)=4</li>
+<li>Immigration (fish per year;<span class="math inline">\(I\)</span>)=0</li>
+<li>Death (fish per year; <span class="math inline">\(D\)</span>)=3</li>
+<li>Emigration (fish per year; <span class="math inline">\(E\)</span>)=0</li>
+</ul>
 <p>Using the figure for Lake Bulldog (laminated sheet 1):</p>
-<p>1.Add 5 goldfish to the outline of Lake Bulldog. This represents the initial population abundance in 2015, see Table 1. 2.Add 4 Goldfish representing births and remove 3 goldfish representing deaths from the lake and count how many gold fish remain in the Lake Bulldog. The difference of births and deaths is <span class="math inline">\(\frac{dA}{dt}\)</span> (Equation 3). Record this number for <span class="math inline">\(\frac{dA}{dt}\)</span> in year 2015. 3.Record this number as the abundances (A) in year 2016. This should equal equation 8 if you simply add them up in Table 1. 4.Add 4 Goldfish representing births and remove 3 goldfish representing deaths from the lake and. The difference of births and deaths is <span class="math inline">\(\frac{dA}{dt}\)</span>. Record this number for <span class="math inline">\(\frac{dA}{dt}\)</span> in year 2016. 5.Count how many gold fish remain in the Lake Bulldog Record this number as the abundances (A) in year 2017. 6. Repeat steps 4 and 5 until Table 1 is filled.</p>
+<p>1.Add 5 goldfish to the outline of Lake Bulldog. This represents the initial population abundance in 2015, see Table 1.<br />
+2.Add 4 Goldfish representing births and remove 3 goldfish representing deaths from the lake and count how many gold fish remain in the Lake Bulldog. The difference of births and deaths is <span class="math inline">\(\frac{dA}{dt}\)</span> (Equation 3). Record this number for <span class="math inline">\(\frac{dA}{dt}\)</span> in year 2015.<br />
+3.Record this number as the abundances (<span class="math inline">\(A\)</span>) in year 2016. This should equal equation 8 if you simply add them up in Table 1.<br />
+4.Add 4 Goldfish representing births and remove 3 goldfish representing deaths from the lake and. The difference of births and deaths is <span class="math inline">\(\frac{dA}{dt}\)</span>. Record this number for <span class="math inline">\(\frac{dA}{dt}\)</span> in year 2016.<br />
+5.Count how many gold fish remain in the Lake Bulldog Record this number as the abundances (A) in year 2017.<br />
+6. Repeat steps 4 and 5 until Table 1 is filled.</p>
 <p>Table 1. Forecasted population dynamics of Largemouth Bass in Lake Bulldog.</p>
-<table style="border-collapse:collapse;border-spacing:0">
-<tr>
-<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-Year (t)
-</th>
-<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-<span class="math inline">\(dA/dt\)</span>
-</th>
-<th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-A
-</th>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Year (t)</th>
+<th align="center"><span class="math inline">\(\frac{dA}{dt}\)</span></th>
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="right">Year (t)</th>
+<th align="center"><span class="math inline">\(\frac{dA}{dt}\)</span></th>
+<th align="center"><span class="math inline">\(A\)</span></th>
 </tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2015
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-5
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2022</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
 </tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2016
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
+<tr class="even">
+<td align="right">2018</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2023</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
 </tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2017
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-7
-</td>
+<tr class="odd">
+<td align="right">2019</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2024</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
 </tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2018
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
+<tr class="even">
+<td align="right">2020</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2025</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
 </tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2019
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2026</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
 </tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2020
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-</tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2021
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-11
-</td>
-</tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2022
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-</tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2023
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-</tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2024
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-</tr>
-<tr>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-2025
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-<td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">
-</td>
-</tr>
+</tbody>
 </table>
 <ol start="7" style="list-style-type: decimal">
 <li>Using the data in Table 1 plot the population abundance (A; y-axis) versus Year (t; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-2-1.png" width="288" style="display: block; margin: auto;" /></p>
+<p><img src="images/unnamed-chunk-3-1.png" width="288" style="display: block; margin: auto;" /></p>
 <ol start="8" style="list-style-type: decimal">
-<li>Using the data in Table 1 plot the change in abundance over time ( ; y-axis) versus abundance (A; x-axis).</li>
+<li>Using the data in Table 1 plot the change in abundance over time (“<span class="math inline">\(\frac{dA}{dt}\)</span>; y-axis) versus abundance (A; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-3-1.png" width="624" /></p>
+<p><img src="images/unnamed-chunk-4-1.png" width="624" /></p>
 <div id="questions-9-points" class="section level3">
 <h3>Questions (9 points)</h3>
 <p>2.1. Given the parameters used to calculate and A report the following values (3 points): A) What will be in year 2028?<br />
@@ -544,7 +488,7 @@ B) What will A be in year 2027? C) Suppose the birth rate was 3 and the death ra
 </div>
 <div id="laboratory-exercise-3-population-dynamics-in-bulldog-creek" class="section level2">
 <h2>LABORATORY EXERCISE 3: POPULATION DYNAMICS IN BULLDOG CREEK</h2>
-<p>Bulldog Creek is a first order tributary (i.e., headwater stream)[^https://en.wikipedia.org/wiki/Strahler_number] to Lake Bulldog and is occupied by Largemouth Bass. There is a 5 m scenic waterfall located at river kilometer (RKM) 0.5. The birth rate is similar to Lake Bulldog but the death and emigration rates differ.</p>
+<p>Bulldog Creek is a first order tributary (i.e., headwater stream)<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> to Lake Bulldog and is occupied by Largemouth Bass. There is a 5 m scenic waterfall located at river kilometer (RKM) 0.5. The birth rate is similar to Lake Bulldog but the death and emigration rates differ.</p>
 <p><span class="math display">\[\begin{align}
   &amp; \text{Birth:}\,B=3 \\ 
  &amp; \text{Immigration:}\,I=0 \\ 
@@ -672,17 +616,73 @@ A
 </td>
 </tr>
 </table>
+<pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, iseq, value = 10): invalid factor level,
+## NA generated</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Year (t)</th>
+<th align="center"><span class="math inline">\(\frac{dA}{dt}\)</span></th>
+<th align="center"><span class="math inline">\(A\)</span></th>
+<th align="right">Year (t)</th>
+<th align="center"><span class="math inline">\(\frac{dA}{dt}\)</span></th>
+<th align="center"><span class="math inline">\(A\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="center">__________</td>
+<td align="center">NA</td>
+<td align="right">2022</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+</tr>
+<tr class="even">
+<td align="right">2018</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2023</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+</tr>
+<tr class="odd">
+<td align="right">2019</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2024</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+</tr>
+<tr class="even">
+<td align="right">2020</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2025</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+</tr>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+<td align="right">2026</td>
+<td align="center">__________</td>
+<td align="center">__________</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Because we are working on an annual time step dt = 1.</li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
 <li>Using the data in Table 2 plot the population abundance (<span class="math inline">\(A\)</span>; y-axis) versus Year (t; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-6-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Using the data in Table 2 plot the change in abundance over time ( ; y-axis) versus abundance (A; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="images/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div id="questions-9-points-1" class="section level3">
 <h3>Questions (9 points)</h3>
 <p>3.1. The BIDE model allows for emigration from the system, but the immigration rate is 0. Is this biologically reasonable to you given this system? Why or why not? (3 points) <br> <br> <br> <br> <br> 3.2. In the Bulldog Creek example, what was the difference between births and deaths? Was the number positive, negative, or 0? Based on whether the number is positive, negative or 0, what should the population do if the initial abundance was 20 (hint: look at Figure 2). (3 points) <br> <br> <br> <br> <br> 3.3. How does the plot of abundance for Bulldog Creek compare to the same plot for Lake Bulldog? How does the difference between births and deaths for Lake Bulldog compare to Bulldog Creek? (3 points) <br> <br> <br> <br> <br></p>
@@ -781,11 +781,11 @@ A
 <ol start="5" style="list-style-type: decimal">
 <li>Using the data in Table 2 plot the population abundance (<span class="math inline">\(A\)</span>; y-axis) versus Year (<span class="math inline">\(t\)</span>; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-8-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Using the data in Table 3 plot the change in abundance over time (<span class="math inline">\(dA/dt\)</span>; y-axis) versus abundance (<span class="math inline">\(A\)</span>; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <div id="exponential-model-with-harvest" class="section level3">
 <h3>Exponential model with harvest</h3>
@@ -894,16 +894,22 @@ A
 <ol start="7" style="list-style-type: decimal">
 <li>Using the data in Table 4 plot abundance over time (<span class="math inline">\(A\)</span>; y-axis) versus Year (t; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-10-1.png" width="672" /></p>
 <ol start="8" style="list-style-type: decimal">
 <li>Using the data in Table 4 plot the change in abundance over time (<span class="math inline">\(dA/dt\)</span>; y-axis) versus abundance (<span class="math inline">\(A\)</span>; x-axis).</li>
 </ol>
-<p><img src="images/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="images/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="questions-5-points" class="section level3">
 <h3>Questions (5 points)</h3>
 <p>4.1. How does the plot of versus A for both exponential models differ for the BIDE models? (2 points) <br> <br> <br> <br> <br> 4.2. Given the population dynamics and rates for the exponential model with harvest, what would you set harvest to? Why? (2 points; there is really no right or wrong answer here I am curious about your process) <br> <br> <br> <br> <br> 4.3. Can you think of any way to improve this model? (1 point) <br> <br> <br> <br> <br></p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Strahler_number" class="uri">https://en.wikipedia.org/wiki/Strahler_number</a><a href="#fnref1">↩</a></p></li>
+</ol>
 </div>
 
  </div> <!-- articleBandContent -->

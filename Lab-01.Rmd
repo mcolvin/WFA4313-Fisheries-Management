@@ -76,7 +76,7 @@ and conceptually it looks like this:
 
 
 ```{r echo=FALSE, out.width="95%"}
-knitr::include_graphics("images/BIDE-Figure.png")
+knitr::include_graphics("images/BIDE.png")
 ```
 
 
@@ -91,22 +91,22 @@ makes it easy to forecast population dynamics over time. Let’s expand
 the equation above to do this (notice that is equal to 1) 
 
 
-$\frac{dA}{dt}=B+I-(D+E)$
+$$\frac{dA}{dt}=B+I-(D+E)$$
 
 
-$\frac{{{A}_{t+dt}}-{{A}_{t}}}{dt}=B+I-(D+E)$
+$$\frac{{{A}_{t+dt}}-{{A}_{t}}}{dt}=B+I-(D+E)$$
 
 
-$\frac{{{A}_{t+1}}-{{A}_{t}}}{1}=B+I-(D+E)$
+$$\frac{{{A}_{t+1}}-{{A}_{t}}}{1}=B+I-(D+E)$$
 
 
-${{A}_{t+1}}-{{A}_{t}}=B+I-(D+E)$
+$${{A}_{t+1}}-{{A}_{t}}=B+I-(D+E)$$
 
 
-${{A}_{t+1}}={{A}_{t}}+B+I-(D+E)$
+$${{A}_{t+1}}={{A}_{t}}+B+I-(D+E)$$
 
 
-${{A}_{t+1}}={{A}_{t}}+\frac{dA}{dt}$
+$${{A}_{t+1}}={{A}_{t}}+\frac{dA}{dt}$$
 
 
 
@@ -115,36 +115,49 @@ Suppose, the birth, immigration, death, and emigration rates for Lake
 Bulldog are: 
 
 
-$$\begin{align}
-  & \text{Birth (fish per year;}\,B)=4 \\ 
- & \text{Immigration (fish per year;}\,I)=0 \\ 
- & \text{Death (fish per year;}\,D)=3 \\ 
- & \text{Emigration (fish per year;}\,E)=0 \\ 
-\end{align}$$
+* Birth (fish per year;$B$)=4 
+* Immigration (fish per year;$I$)=0 
+* Death (fish per year; $D$)=3 
+* Emigration (fish per year; $E$)=0 
 
 
 Using the figure for Lake Bulldog (laminated sheet 1):
 
 1.Add 5 goldfish to the outline of Lake Bulldog. This represents the 
-initial population abundance in 2015, see Table 1. 
+initial population abundance in 2015, see Table 1.  
 2.Add 4 Goldfish representing births and remove 3 goldfish representing 
 deaths from the lake and count how many gold fish remain in the Lake 
 Bulldog. The difference of births and deaths is $\frac{dA}{dt}$ 
-(Equation 3). Record this number for $\frac{dA}{dt}$ in year 2015. 
-3.Record this number as the abundances (A) in year 2016. This should 
-equal equation 8 if you simply add them up in Table 1. 
+(Equation 3). Record this number for $\frac{dA}{dt}$ in year 2015.   
+3.Record this number as the abundances ($A$) in year 2016. This should 
+equal equation 8 if you simply add them up in Table 1.   
 4.Add 4 Goldfish representing births and remove 3 goldfish representing 
 deaths from the lake and. The difference of births and deaths is 
-$\frac{dA}{dt}$. Record this number for $\frac{dA}{dt}$ in year 2016. 
+$\frac{dA}{dt}$. Record this number for $\frac{dA}{dt}$ in year 2016.   
 5.Count how many gold fish remain in the Lake Bulldog Record this number 
-as the abundances (A) in year 2017. 
-6. Repeat steps 4 and 5 until Table 1 is filled.
+as the abundances (A) in year 2017.   
+6. Repeat steps 4 and 5 until Table 1 is filled.  
 
 Table 1. Forecasted population dynamics of Largemouth Bass in Lake 
 Bulldog. 
 
 
-<table style="border-collapse:collapse;border-spacing:0"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">Year (t)</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">$dA/dt$</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">A</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2015</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">5</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2016</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2017</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">7</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2018</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2019</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2020</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2021</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">11</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2022</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2023</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2024</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2025</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr></table>
+```{r,echo=FALSE}
+yr<-2017
+tmp<-data.frame(year1=c(yr:(yr+4)),
+    dadt1=rep("__________",5),
+    A1=rep("__________",5),
+    year2=c((yr+5):(yr+9)),
+    dadt2=rep("__________",5),
+    A2=rep("__________",5))
+
+knitr::kable(tmp,col.names=c("Year (t)","$\\frac{dA}{dt}$",
+    "$A$","Year (t)","$\\frac{dA}{dt}$",
+    "$A$"),align=c("rccrcc"))
+    
+```
+
+
 
 7. Using the data in Table 1 plot the population abundance (A; y-axis) 
 versus Year (t; x-axis). 
@@ -164,7 +177,7 @@ abline(v=seq(xmin,xmax,by=1),col='lightgrey')
 ```
 
 
-8. Using the data in Table 1 plot the change in abundance over time ( ; 
+8. Using the data in Table 1 plot the change in abundance over time ("$\frac{dA}{dt}$; 
 y-axis) versus abundance (A; x-axis). 
 
 ```{r,echo=FALSE,fig.width=6.5,fig.height=6.5}
@@ -213,7 +226,7 @@ abline(v=seq(xmin,xmax,by=1),col='lightgrey')
 
 
 Bulldog Creek is a first order tributary (i.e., headwater 
-stream)[^https://en.wikipedia.org/wiki/Strahler_number] to Lake Bulldog 
+stream)^[https://en.wikipedia.org/wiki/Strahler_number] to Lake Bulldog 
 and is occupied by Largemouth Bass. There is a 5 m scenic waterfall 
 located at river kilometer (RKM) 0.5. The birth rate is similar to Lake 
 Bulldog but the death and emigration rates differ. 
@@ -244,6 +257,22 @@ equation 8 if you simply add them up in Table 2.
 Table 2. Forecasted population dynamics of Largemouth Bass in Bulldog Creek.  
 
 <table style="border-collapse:collapse;border-spacing:0"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">Year (t)</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">$dA/dt*$</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">A</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2015</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">10</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2016</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2017</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2018</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2019</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2020</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2021</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2022</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2023</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2024</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top">2025</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top"></td></tr></table>
+
+```{r,echo=FALSE}
+yr<-2017
+tmp<-data.frame(year1=c(yr:(yr+4)),
+    dadt1=rep("__________",5),
+    A1=rep("__________",5),
+    year2=c((yr+5):(yr+9)),
+    dadt2=rep("__________",5),
+    A2=rep("__________",5))
+tmp[1,3]<-10
+knitr::kable(tmp,col.names=c("Year (t)","$\\frac{dA}{dt}$",
+    "$A$","Year (t)","$\\frac{dA}{dt}$",
+    "$A$"),align=c("rccrcc"))
+    
+```
+
 
 * Because we are working on an annual time step dt = 1.
 

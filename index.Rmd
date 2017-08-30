@@ -28,7 +28,7 @@ for(i in  unique(dat$id))
     {
     pp<-list(
         L1=as.character(na.omit(dat[dat$id==i,]$L1)),
-        L2=dat[dat$id==i,]$L2)
+        L2=na.omit(dat[dat$id==i,]$L2))
     x<-c(x,pp)
     }
 pander::pandoc.list(x)
