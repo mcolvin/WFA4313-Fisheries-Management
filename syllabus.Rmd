@@ -10,10 +10,13 @@ output:
 <!--
 Update lines 199 and 220 if new class.
 library(knitr)
-rmarkdown::render_site("syllabus.Rmd")# build website
-rmarkdown::render_site()# build website
+rmarkdown::render("syllabus.Rmd")# build website
+rmarkdown::render()# build website
 -->
 
+```{r,echo=FALSE}
+year<-2018
+```
 
 Instructor: Dr. Michael E. Colvin  
 Office: Thompson 215  
