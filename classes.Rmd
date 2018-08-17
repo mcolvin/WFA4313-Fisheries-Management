@@ -17,7 +17,7 @@ This is where you can find class decks, links to assignments, and so on!
 
 
 ```{r,echo=FALSE,results='asis'}
-dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
+dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
     sheetName="class-content",
     stringsAsFactors=FALSE)
 dat<-subset(dat,process==1)

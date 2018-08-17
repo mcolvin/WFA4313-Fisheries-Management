@@ -17,9 +17,10 @@ weather and instructor availability.*
 
 
 ```{r,echo=FALSE,results='asis'}
-dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,
+dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
     sheetName="lab-schedule",
     stringsAsFactors=FALSE)
+dat<-subset(dat,print==1)
 dat$Date<-as.character(dat$Date)
 dat$L1<-paste("Laboratory"," ",dat$Laboratory,"(",dat$Date,"): ",
     dat$L1,sep="")

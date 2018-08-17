@@ -10,12 +10,13 @@ output:
 <!--
 Update lines 199 and 220 if new class.
 library(knitr)
-rmarkdown::render("syllabus.Rmd")# build website
+rmarkdown::render_site("syllabus.Rmd")# build website
 rmarkdown::render()# build website
 -->
 
-```{r,echo=FALSE}
+```{r,updateAtBegining, echo=FALSE}
 year<-2018
+schedule="2018-F" ## WORKSHEET OF THE CLASS SCHEDULE
 ```
 
 Instructor: Dr. Michael E. Colvin  
@@ -244,7 +245,8 @@ laboratory sessions may be used to make up for missed lectures due to
 weather and instructor availability.
 
 ```{r,echo=FALSE}
-dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,sheetName="2017-F",
+dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
+    sheetName=schedule,
     stringsAsFactors=FALSE)
 dat<-dat[,c(1:4)]
 dat[is.na(dat)]<-""

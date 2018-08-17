@@ -15,14 +15,10 @@ rmarkdown::render_site()# build website
 
 # Course announcements
 
-
-    
-    
 ```{r,echo=FALSE,results="asis"}
-dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx",
+dat<-xlsx::read.xlsx("course-schedule.xlsx",
     sheetName="announcements",
     stringsAsFactors=FALSE)
-    
 x<-list()
 for(i in  unique(dat$id))
     {
@@ -36,7 +32,6 @@ pander::pandoc.list(x)
 
 <!--
 NPR: To Help Keep Sturgeon Sustainable, Farm And Fishery Work Together. http://google.com/newsstand/s/CBIw7tWXzjI
-
 
 Dick Grachek: Maximum Sustainable Yield: Just More Management Delusion or a Bureaucratic Con? http://fisherynation.com/archives/61864
 
