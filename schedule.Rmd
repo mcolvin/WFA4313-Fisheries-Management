@@ -19,7 +19,8 @@ weather and instructor availability.
 
 
 ```{r,echo=FALSE,message=FALSE,warning=FALSE}
-dat<-xlsx::read.xlsx("_includes/course-schedule.xlsx" ,sheetName="2017-F",
+dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
+    sheetName="2018-F",
     stringsAsFactors=FALSE)
 dat<-dat[,c(1:4)]
 dat[is.na(dat)]<-""
