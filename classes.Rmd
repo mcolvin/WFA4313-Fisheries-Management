@@ -14,9 +14,9 @@ rmarkdown::render_site("classes.Rmd")# build website
 
 This is where you can find class decks, links to assignments, and so on!
 
+* [Class 1 deck](pdfs/FA-2018-Module-01.pdf#page=4)
 
-
-```{r,echo=FALSE,results='asis'}
+```{r,echo=FALSE,results='asis',eval=FALSE}
 dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
     sheetName="class-content",
     stringsAsFactors=FALSE)

@@ -10,13 +10,18 @@ output:
 rmarkdown::render_site("labs.Rmd")# build website
 -->
 
-*The schedule below is provisional and subject to change depending on 
-weather and instructor availability.*
 
 
 
 
-```{r,echo=FALSE,results='asis'}
+## Lab 1: Population dynamics (9/4/2018)
+
+
+* Lab handout [pdf](pdfs/Lab-02-FA-2018.pdf)
+* Link to enter lab questions [here](https://goo.gl/forms/Xw787V1T7jeoGaZB2)
+* Repsonses to lab questions are due by 5pm 9/11/2018
+
+```{r,echo=FALSE,results='asis',eval=FALSE}
 dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
     sheetName="lab-schedule",
     stringsAsFactors=FALSE)

@@ -1,4 +1,5 @@
 name: "wfa4313"
+exclude: ["*.pptx","*.docx","*.pptx"]
 navbar:
   title: "WFA4313/6313"
   right:
