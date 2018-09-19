@@ -1,0 +1,31 @@
+
+
+Class 06.
+Linking age and size
+* Size is related to age: How do we go from age to length?
+    * Growth models predict length at age
+    * How do we age fish?
+* Management application: PDSG predicting age from length
+    * Problem: increase age-0 and age-1 recruitment 
+    * Alternatives: shallow water habitat
+    * 
+* Growth issues
+    * Stunting of fish in populations
+    * Density dependent
+    * Density independent
+
+
+* Management alternatives
+    * Winter water level drawdowns to increase bass predation on bluegills
+    * stocking additional predators
+    * Draining the pond and re-stocking
+    * Seining to remove excess stunted bluegills 
+    * Rotenone and start over
+    * weed control: pathway 1) reduced feeding rates in lakes with dense macrophytes and pathway 2) increase macrophyte density 
+    reduces predator foraging efficiency by providing refuge for prey
+    * Supplemental feeding
+    * stocking with largemouth black bass, 
+    * Fertilization to increase the food supply, and 
+    * Heavy fishing to reduce the number of fish
+    * Remove LMB-rule of thumb is around 10 lbs per acre and then 15 if no change, continue increasing rate until change occurs
+    

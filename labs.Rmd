@@ -16,10 +16,10 @@ rmarkdown::render_site("labs.Rmd")# build website
 
 ## Lab 1: Population dynamics (9/4/2018)
 
-
 * Lab handout [pdf](pdfs/Lab-01-FA-2018.pdf)
 * Link to enter lab questions [here](https://goo.gl/forms/Xw787V1T7jeoGaZB2)
 * Repsonses to lab questions are due by 5pm 9/11/2018
+
 
 ## Lab 2: Population dynamics and management models (9/12/2018)
 
@@ -28,6 +28,11 @@ rmarkdown::render_site("labs.Rmd")# build website
 * Repsonses to lab questions are due by 5pm 9/18/2018
 
 
+## Lab 3: Harvest, effort, and monitoring (9/18/2018)
+
+* Lab handout [pdf](pdfs/Lab-03-FA-2018.pdf)
+* Link to enter lab questions [here](https://goo.gl/forms/AQ3EzRDMee1Y2Ro53)
+* Repsonses to lab questions are due by 5pm 9/25/2018
 
 ```{r,echo=FALSE,results='asis',eval=FALSE}
 dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
