@@ -40,6 +40,15 @@ rmarkdown::render_site("labs.Rmd")# build website
 * Link to enter lab questions [here](https://goo.gl/forms/0gjNpIxeuV8aPk152)
 * Repsonses to lab questions are due by 5pm 10/2/2018
 
+## Lab 5: Stream Fish Abundance (10/1/2018)
+
+* Lab handout [pdf](pdfs/Lab-05-FA-2018.pdf)
+* Link to enter lab questions [here](https://docs.google.com/forms/d/e/1FAIpQLScI4cG4WYIS_qKHIEpa8Uy4Hne0AWCXjbiKL0BbOlnUBKGILA/viewform)
+* Repsonses to lab questions are due by 5pm 10/7/2018
+
+
+
+
 
 ```{r,echo=FALSE,results='asis',eval=FALSE}
 dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
