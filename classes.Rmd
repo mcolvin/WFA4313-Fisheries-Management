@@ -25,7 +25,13 @@ rmarkdown::render_site("classes.Rmd")# build website
 * [Class 7 deck](pdfs/FA-2018-Class-07.pdf)
 * [Class 8 deck](pdfs/FA-2018-Class-08.pdf)
 * [Class 9 deck](pdfs/FA-2018-Class-09.pdf)
-* Final exam will cover up to class 9.  
+* [Class 10 deck](pdfs/FA-2018-Class-10.pdf)
+* [Class 11 deck](pdfs/FA-2018-Class-11.pdf)
+* [Class 12 deck](pdfs/FA-2018-Class-12.pdf)
+* [Class 13 deck](pdfs/FA-2018-Class-13.pdf)
+* [Class 14 deck](pdfs/FA-2018-Class-14.pdf)
+* [Class 15 deck](pdfs/FA-2018-Class-15.pdf)
+
 
 ```{r,echo=FALSE,results='asis',eval=FALSE}
 dat<-xlsx::read.xlsx("course-schedule.xlsx" ,
