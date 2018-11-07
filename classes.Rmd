@@ -32,6 +32,8 @@ rmarkdown::render_site("classes.Rmd")# build website
 * [Class 14 deck](pdfs/FA-2018-Class-14.pdf)
 * [Class 15 deck](pdfs/FA-2018-Class-15.pdf)
 * [Class 16 deck](pdfs/FA-2018-Class-16.pdf)
+* [Class 17 deck](pdfs/FA-2018-Class-17.pdf)
+* [Class 18 deck](pdfs/FA-2018-Class-18.pdf)
 
 
 ```{r,echo=FALSE,results='asis',eval=FALSE}
