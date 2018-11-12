@@ -10,4 +10,150 @@ output:
 rmarkdown::render_site("Final-Project.Rmd")# build website
  -->
 
-alksdfl;akjsd;lkj
+## Timeline and due dates
+
+See details for each deliverable below.
+
+* Identify your article and email pdf: due 11/20/2018 by 5pm (30 points towards class
+participation and homework points). 
+* Presentation. 12/4/2018 (75 points)
+* 1st draft of brief. 11/30/2018 (50 points towards class
+participation and homework points). 
+* Final brief. 12/11/2018 (175 points)
+
+
+## Select an article to brief
+
+The article should identify a management problem (e.g., stunting reducing size
+structure, population declines, angler satisfaction). 
+
+You are not limited to the journals below but they are recommended.
+
+* [North American Journal of Fisheries Management](http://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,shib&amp;db=cat00043a&amp;AN=mstate.817432&amp;site=eds-live&amp;custid=magn1307)
+* [Canadian Journal of Fisheries and Aquatic Sciences](http://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,shib&amp;db=ser&amp;AN=176039519&amp;site=eds-live&amp;custid=magn1307)
+* [Transactions of the American Fisheries Society](http://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,shib&amp;db=eih&amp;AN=120686901&amp;site=eds-live&amp;custid=magn1307)
+* [Fisheries Management and Ecology](http://search.ebscohost.com/login.aspx?direct=true&amp;AuthType=ip,shib&amp;db=cat00043a&amp;AN=mstate.1291676&amp;site=eds-live&amp;custid=magn1307)
+
+Once you identify an article send a pdf copy to me by the due date for 
+full credit. 
+
+
+## What should the brief cover?
+
+* What was the objectives of the study
+* What were the results. Summarize and think about
+how they apply to local fisheries management
+* Is there a way to monitor the effect of a management
+action related to study?
+* Implications to managing Mississippi Fisheries
+
+## Management brief presentation
+
+### Presentation details
+
+The presentation should be short, 5 minutes at most and aimed at an 
+audience of stakeholders. Stakeholders in fisheries may include anglers, 
+angler groups (e.g., BASS), and lake associations. The following rubric 
+provides guidance on how this element will be assessed. Presentations 
+will be held Tuesday December 4th during lab. The slides should relate to
+the 4 bullets above.
+
+<!--
+The presentation shall consist of 5 slides
+
+1. Slide documenting that journal article you evaluated
+2. Slide specifying a fishery problem the study can contribute
+to **and** how that problem relates to Mississippi fisheries.
+3. Slide specifying potential management objectives the study 
+can related to.
+4. Slide specifying potential management actions that can be used
+to achieve the objectives. It is likely the study will address one action
+so do think creatively about other actions that might be used to achieve 
+the management objectives you specified.
+5. Slide specifying potential ways to monitor whether the action had the
+intended effect. 
+-->
+
+ 
+### Day of presentation details
+
+Email presentations to me  24 hours before the final lab period-by 
+Monday 1pm **otherwise** bring the presentation on a USB drive
+
+### Presentation Rubric 
+
+
+|PRESENCE|0|2.5|5|7.5|10|12.5|15|
+|------|------|------|------|------|------|------|------|
+
+* body language & eye contact  
+* contact with the public  
+* poise  
+* physical organization  
+
+|LANGUAGE SKILLS|0|2.5|5|7.5|10|12.5|15|
+|------|------|------|------|------|------|------|------|
+
+* correct usage  
+* appropriate vocabulary and grammar
+* understandable (rhythm, intonation, accent)
+* spoken loud enough to hear easily
+
+|ORGANIZATION|0|2.5|5|7.5|10|12.5|15|
+|------|------|------|------|------|------|------|------|
+
+* clear slide content
+* logical structure
+* clear management implications
+
+
+|MASTERY OF THE PAPER|0|2.5|5|7.5|10|12.5|15|
+|------|------|------|------|------|------|------|------|
+
+* pertinence
+* depth of commentary
+* spoken, not read
+* able to answer questions
+* application to Mississippi fisheries
+
+
+|OVERALL IMPRESSION|0|2.5|5|7.5|10|12.5|15|
+|------|------|------|------|------|------|------|------|
+
+* very interesting / very boring
+* pleasant / unpleasant to listen to
+* very good / poor communication
+
+**TOTAL SCORE  ______________ out of 75**
+
+
+## Management Brief Details
+
+The management brief should be no longer than 1000 words and targeted 
+towards the same stakeholders as the presentation and include all the
+content covered in the presentation. **Email a copy in 
+word or pdf to mec685@msstate.edu by the due date and time for full 
+credit** 
+
+
+ 
+
+<!--
+Sent 11/25/2017
+
+All,
+
+Hope you are having a good break. Couple of things:
+
+- I added all the remaining grades to Blackboard, assuming you get all 
+the points for the management brief, presentation and final exam, the 
+&quot;Total Points&quot; column represents the sum of all the class 
+elements. It will give you an idea for your final grade, again assuming 
+you get all the points for the last graded class elements. 
+- Attached is the rubric I work off of for the class presentation of 
+your management article. Keep to 5 minutes at most. Recall we will be 
+presenting them in the last lab period. 
+-->
+ 
+ 
+ 
