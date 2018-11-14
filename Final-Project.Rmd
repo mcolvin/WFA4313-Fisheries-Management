@@ -25,7 +25,9 @@ participation and homework points).
 ## Select an article to brief
 
 The article should identify a management problem (e.g., stunting reducing size
-structure, population declines, angler satisfaction). 
+structure, population declines, angler satisfaction). In the brief you will need
+to 1) summarize the article for a lay audience and 2) discuss the management 
+implications for Mississippi Fisheries. 
 
 You are not limited to the journals below but they are recommended.
 
@@ -40,13 +42,13 @@ full credit.
 
 ## What should the brief cover?
 
-* What was the objectives of the study
-* What were the results. Summarize and think about
-how they apply to local fisheries management
-* Is there a way to monitor the effect of a management
-action related to study?
-* Implications to managing Mississippi Fisheries
-
+1. What was the objectives of the study
+2. What were the relevant methods and results. 
+3. What are the management implications for a Mississippi Fishery    
+    * Specifically you need identify a problem the study may apply to
+    * Identify how the study and results can potential solve the problem
+    and metrics that might be monitored to evaluate the problem
+    
 ## Management brief presentation
 
 ### Presentation details
@@ -131,7 +133,11 @@ Monday 1pm **otherwise** bring the presentation on a USB drive
 
 The management brief should be no longer than 1000 words and targeted 
 towards the same stakeholders as the presentation and include all the
-content covered in the presentation. **Email a copy in 
+content covered in the presentation and the bullets above. 
+
+
+
+**Email a copy in 
 word or pdf to mec685@msstate.edu by the due date and time for full 
 credit** 
 

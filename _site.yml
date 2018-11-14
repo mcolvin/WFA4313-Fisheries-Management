@@ -9,9 +9,9 @@ navbar:
     - text: "Labs"
       icon: fa-line-chart
       href: labs.html  
-    - text: "Assignments"
+    - text: "Final Project"
       icon: fa-pencil-square-o
-      href: Assignments.html        
+      href: Final-Project.html        
     - text: "Schedule"
       icon: fa-calendar
       href: schedule.html       
